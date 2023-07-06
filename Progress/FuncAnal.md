@@ -59,7 +59,37 @@ ___
 
 ## $L^p$空間
 
+##### Holderの不等式、Minkowskiの不等式
 
+・共役指数$1/p+1/q=1\ (p,q\in(1,\infty))$
+
+    ・(1,∞)の場合も含めてよい
+    ・x^{1-t}y^t≦(1-t)x+ty (t∊[0,1],x,y∊(0,∞))
+    ・(p-1)q=p
+
+・$(X,\mathfrak{M},\mu)$を測度空間、$p,q$を共役指数、$f,g:X\to[0,\infty]$を可測関数とすると、$\int_X fgd\mu\le(\int_Xf^pd\mu)^{\frac{1}{p}}(\int_Xg^qd\mu)^{\frac{1}{q}}$ （Holder不等式）
+
+    ・可積分関数ではない
+
+・$(X,\mathfrak{M},\mu)$を測度空間、$p\in(1,\infty)$、$f,g:X\to[0,\infty]$を可測関数とすると、$(\int_X(f+g)^pd\mu)^{\frac{1}{p}}\le(\int_Xf^pd\mu)^{\frac{1}{p}}+(\int_Xg^pd\mu)^{\frac{1}{p}}$ (Minkowski不等式)
+
+    ・可積分関数ではない
+
+##### $L^p$空間
+
+・複素数値可測関数$\mathcal{L}(X,\mathfrak{M},\mu)$から構成される同値類$L(X,\mathfrak{M},\mu)$
+
+    ・f~g⇔a.e.f=g
+    ・複素数C上ベクトル空間で、積、複素共役がwell-defined
+
+・$L^p(X,\mathfrak{M},\mu)=\{(\int_X|f|^pd\mu)^{\frac{1}{p}}<\infty\}\ (p\in[1,\infty))$
+
+    ・L^pはノルム空間かつベクトル空間
+
+・$L^{\infty}(X,\mathfrak{M},\mu)=\{\inf\{\alpha\ge0\ |\ \mu((\alpha<|f|))=0\}<\infty\}$
+
+    ・本質的上限のこと、任意の実数より大きくなる点が零集合
+    ・L^∞はノルム空間かつベクトル空間
 
 ---
 
