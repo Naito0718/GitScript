@@ -1,6 +1,6 @@
 # 凸解析
 
-##### 凸集合と凸関数
+#### 凸集合と凸関数
 
 ##### 凸関数$f(\lambda a+(1-\lambda)b)\ge\lambda f(a)+(1-\lambda)f(b)$
 
@@ -85,7 +85,7 @@
 
 ---
 
-##### 多変数凸関数 $f:\bm{R}^n\supset X\to\bm{R}\cup\{\infty\},\ f(\lambda a+(1-\lambda)b)\ge\lambda f(a)+(1-\lambda)f(b),\ X$は凸集合
+#### 多変数凸関数 $f:\bm{R}^n\supset X\to\bm{R}\cup\{\infty\},\ f(\lambda a+(1-\lambda)b)\ge\lambda f(a)+(1-\lambda)f(b),\ X$は凸集合
 
 ・凸関数の和は凸関数
 
@@ -141,7 +141,7 @@
 
 ---
 
-##### ルジャンドル変換
+#### ルジャンドル変換(別に凸じゃなくてもできるが、逆変換がちょっと変わる)
 
 ・関数$f$に対する最小値集合$\arg\min f=\{x\in\bm{R}^n\ |\ f(x)\le f(y),\ \forall y\in S\}$
 
