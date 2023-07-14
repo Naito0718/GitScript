@@ -1,12 +1,21 @@
-# 微分幾何
+# $\bm{R}^n$の幾何学
 
-## 平面曲線
 
-・曲率
+
+## $\bm{R}^2$
+
+#### 平面曲線
+
+・曲率 $\kappa(s)=|\gamma''(s)|$
+
+曲率$\kappa(s)$が与えられたとき、$\theta(s)=\int_{s_0}^s\kappa(s') ds'$、$\gamma(s)=\int_{s_0}^sds'(\cos\theta(s'),\sin\theta(s'))$とすれば、これは与えられた曲率を持つ曲線
+
 
 ・回転数
 
-## 空間曲線
+## $\bm{R}^3$
+
+#### 空間曲線
 
 ・曲率$\kappa=|(\dot p\times\ddot p)|/|\dot p|^3$、捩率$\tau$
 
@@ -26,4 +35,4 @@
 ・曲率$\kappa=\frac{a}{a^2+h^2}$
 ・捩率$\tau=\frac{h}{a^2+h^2}$
 
-## 空間曲面
+#### 空間曲面
