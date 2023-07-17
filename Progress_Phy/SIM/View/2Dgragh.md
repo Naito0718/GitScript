@@ -19,7 +19,3 @@ plt.grid(True)  #格子生成
 plt.show()
 
 
-
-
-
-
