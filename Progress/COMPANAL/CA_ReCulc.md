@@ -19,3 +19,7 @@
 \frac{n-1}{n}...\frac{2}{3} & (n{奇数})  \\  \
 \frac{n-1}{n}...\frac{1}{2}\frac{\pi}{2} & (n{偶数})    \
 \end{cases}$
+
+## 定積分
+
+・$\int_0^{\pi}\frac{\sin\theta'}{\sqrt{r^2+r'^2-2rr'\cos\theta'}}d\theta'=\frac{1}{rr'}(r+r'-|r-r'|)\quad(r,r'>0)$
