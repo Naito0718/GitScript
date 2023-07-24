@@ -15,6 +15,31 @@ $$x=\begin{pmatrix}\sin\theta_1 \\ \vdots \\ \sin\theta_1 \\ \cos\theta_1 \\ \vd
 
 ---
 
+##### 空間に$n$個の点電荷が置かれているとき
+
+・解くべき方程式：
+$$\sum_j F_{ij}=0\quad(i=0,...,n-1)\\\ \\
+F_{ij}=\frac{1}{4\pi\epsilon_0}\frac{Q_{ij}}{R_{ij}^3}r_{ij}\quad (i\neq j),\quad F_{ii}=0\\\ \\
+Q_{ij}=q_iq_j,\quad r_{ij}=\begin{pmatrix}x_i-x_j \\ y_i-y_j \\ z_i-z_j\end{pmatrix},\quad R_{ij}=|r_{ij}|$$
+
+    ・Q_{ii}=0でもよい
+
+→$Q_{ij}=Q_{ji},\ R_{ij}=R_{ji}$
+→$r_{ij}=-r_{ij},\ F_{ij}=-F_{ji}$
+→$r_{ii}=R_{ii}=F_{ii}=0$
+
+---
+
+・電荷配置$r_{ij}$が与えられたときの、釣り合うための各$q_i$を決定する問題
+
+→解を持つかは不明：$q_0=1$としてもよい
+
+---
+
+・電荷$q_i$が与えられたときの、つり合いの位置を決定する問題
+
+---
+
 ## ばね
 
 ##### 変位$x$が大きいとき

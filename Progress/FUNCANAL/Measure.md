@@ -106,17 +106,22 @@
 
 ---
 
-##### 可測関数のなすベクトル空間$\mathcal{L}(X,\mathfrak{M})=\{f:X\to\bm{C}\ |\ f{は可測}\}$
+##### 可測関数のなすベクトル空間 $\mathcal{L}(X,\mathfrak{M})=\{f:X\to\bm{C}\ |\ f{は可測}\}$
 
-・可測単関数のなすベクトル空間$\mathcal{S}(X,\mathfrak{M})=\{f:X\to\bm{C}\ |\ f{は可測}\}$
+・可測単関数のなすベクトル空間
+$$\mathcal{S}(X,\mathfrak{M})=span\{\chi_E |\ E\in\mathfrak{M}\}$$
 
-    ・S(X,M)={f→複素数Cは可測かつ、f(X)は有限集合}
+→ $S(X,M)=\{f→\bm{C}は可測かつ、f(X)は有限集合\}$
 
-・任意の非負値可測関数$f:X\to[0,\infty]$に対し、$f_n(x)=\sum_{k=1}^{n2^n}\frac{k-1}{2^n}\chi_{\frac{k-1}{2^n}\le f\le\frac{k}{2^n}}(x)+n\chi_{n\le f}(x)$と定義する。（非負値単関数単調増加列近似）
+---
 
-    ・f_nは可測単関数
-    ・f_nは任意のxに対して単調増加列
-    ・f(x)=sup f_n(x)
+・任意の非負値可測関数 $f:X\to[0,\infty]$ に対し、
+$$f_n(x)=\sum_{k=1}^{n2^n}\frac{k-1}{2^n}\chi_{\frac{k-1}{2^n}\le f\le\frac{k}{2^n}}(x)+n\chi_{n\le f}(x)$$
+と定義する。（非負値単関数単調増加列近似）
+
+→ $f_n$は可測単関数
+→ $f_n$は任意の $x$ に対して単調増加列
+→ $f(x)=\sup f_n(x)$
 
 ---
 
@@ -128,17 +133,22 @@
 
 ・測度$\mu:\mathfrak{M}\to[0,\infty]$、測度空間
 
-    ・空で0、μ（非交叉列の無限和）＝Σ(無限和)（定義）
-    ・非交叉列の有限加法性
-    ・任意列の劣σ加法性
-    ・任意列の劣有限加法性
-    ・任意の単調増加列のsup収束性
-    ・任意の単調減少列のinf収束性（μ(E_1)<∞）
-    ・B⊂Aならば、μ(A-B)=μ(A)-μ(B)
+→ $\mu(\phi)=0,\ \mu(\bigcup E_i)=\sum\mu(E_i)\ ({非交叉})$
 
-・制限
+→非交叉列の有限加法性
+→任意列の劣σ加法性
+→任意列の劣有限加法性
+→任意の単調増加列のsup収束性
+→任意の単調減少列のinf収束性（$μ(E_1)<∞$）
+→$B⊂A$ ならば、$μ(A-B)=μ(A)-μ(B)$
 
-    ・相対σ加法族に対してそのまま測度を用いればよい
+---
+
+・測度$\mu$の可測集合への制限
+
+→相対σ加法族に対してそのまま測度を用いればよい
+
+---
 
 ・可測分割
 
@@ -147,7 +157,9 @@
 
 ・$\mu-$零集合（$\mu(N)=0, N$は可測）
 
-・$\mu-$a.e.$x\in X$で$P(x)$が成り立つ$\iff$$\exists N(\mu-{零集合}){であって}\forall x\in X-N{に対して}P(x)$が成り立つ
+→ $\mu-$a.e.$x\in X$で$P(x)$が成り立つ$\iff$$\exists N(\mu-{零集合}){であって}\forall x\in X-N{に対して}P(x)$が成り立つ
+
+---
 
 ##### 非負値可測単関数の積分
 
@@ -232,7 +244,11 @@
 
 ・非負値可測関数列$f_n$に対して、$\int_X\sup_{n\in\bm{N}}\inf_{k\ge n} f_kd\mu\le\sup_{n\in\bm{N}}\inf_{k\ge n} \int_X f_kd\mu$
 
-・$f_n$を複素数値可測関数の列とし、$\forall x\in X{で}f=\lim f_n\in\bm{C}$かつ非負値可積分関数であって$\forall n\in\bm{N},\forall x\in X{で}|f_n(x)|\le h(x)$を満たすものが存在するとする。このとき、$f,f_n$は可積分であって、$\int_X fd\mu=\lim_{n\to\infty}\int_X f_nd\mu$
+・$f_n$を複素数値可測関数の列とし、$\forall x\in X{で}f=\lim f_n\in\bm{C}$かつ、
+非負値可積分関数であって$\forall n\in\bm{N},\forall x\in X{で}|f_n(x)|\le h(x)$を満たすものが存在するとする。
+このとき、$f,f_n$は可積分であって、$\int_X fd\mu=\lim_{n\to\infty}\int_X f_nd\mu$
+
+    ・優収束定理
 
 ---
 
@@ -254,6 +270,8 @@
 →有限加法族ならば半集合代数
 
 →有限加法族$\mathcal{F}$に対して、$\sigma(\mathcal{F})=\mathcal{M}(A)$
+
+---
 
 ・単調族$\mathcal{M}$
 
@@ -286,18 +304,26 @@
 
 →$\sigma$-加法的測度ならば、集合列 $A_n,\ \bigcup A_n\in\mathcal{F}$ に対して$\mu(\bigcup A_n)\le\sum A_n$
 
+---
+
 ・有限加法的測度に対する$\sigma$-有限性
 
     ・半集合代数Iの列C_nで、Iを被覆しμ(C_n)<∞（n任意）を満たすものが存在すること
+
+---
 
 ・$\sigma$-有限測度$\mu:\mathcal{A}\to[0,\infty]\ (\mathcal{A}{は有限加法族})$
 
     ・Aの非交叉列A_nで、Xを被覆しμ(A_n)<∞（n任意）であるものが存在する
     ・Aの単調増加列A_nで、Xを被覆しμ(A_n)<∞（n任意）であるものが存在する
 
+---
+
 ##### Caratheodory外測度
 $$\mu^*:2^X\to[0,\infty],\ \mu^*(E)=\inf\{\sum_{n\in\bm{N}}\mu(A_n)\ |\ A_n\subset\mathcal{A},E\subset\bigcup A_n\},\\\ \mathfrak{M}
 =\{A\in2^X\ |\ \mu^*(E\cap A)+\mu^*(E\cap A^c)=\mu^*(E),\ \forall E\in2^X\}$$　（$\mathcal{A}$は有限加法族、$\mu$は$\sigma$-加法的測度）
+
+---
 
 ・$\mu^*(\phi)=0,\ \mu^*$は単調
 ・$\mu^*$は劣加法的
@@ -307,7 +333,11 @@ $$\mu^*:2^X\to[0,\infty],\ \mu^*(E)=\inf\{\sum_{n\in\bm{N}}\mu(A_n)\ |\ A_n\subs
 ・$\mathcal{A}\subset\mathfrak{M}$
 ・$\mu^*$は$\mu$の拡張
 
+---
+
 ・$\mathcal{A}$を有限加法族、$\mu:\mathcal{A}\to[0,\infty]$を$\sigma$-加法的測度とする。このとき、$\mu$は$\sigma(\mathcal{A})$上の測度に拡張できる。さらに、$\mu$が$\sigma$-有限ならば拡張は一意的。（拡張定理）
+
+---
 
 
 ##### Tonelliの定理、Fubiniの定理
@@ -321,6 +351,8 @@ $$\mu^*:2^X\to[0,\infty],\ \mu^*(E)=\inf\{\sum_{n\in\bm{N}}\mu(A_n)\ |\ A_n\subs
 ・$(X_i,\mathfrak{M}_i,\mu_i)\ (i=1,...,N)$を$\sigma$-有限な測度空間、$f:X_1\times...\times X_N\to[0,\infty]$を非負値可測関数、$\tau$を$n$次の置換とする。このとき、$\int_{\prod_{k=1}^N X_k}fd\otimes_{j=1}^N\mu_j=\int_{X_{\tau(1)}}(...(\int_{X_{\sigma(N)}}f(x_1,...,x_N)d\mu_{\sigma(N)})...)d\mu_{\sigma(1)}$（Tonelliの定理）
 
     ・このとき累次積分の各被積分部分は意味を持つ
+
+---
 
 ・$(X_1,\mathfrak{M}_1,\mu_1)\ ,(X_2,\mathfrak{M}_2,\mu_2)$を$\sigma$-有限な測度空間、$f\in\mathcal{L}(X_1\times X_2,\mathfrak{M}_1\otimes\mathfrak{M}_2,\mu_1\otimes\mu_2)$とする。このとき、$N_1=\{x_1\in X_1\ |\ \int_{X_2}|f|d\mu_2=\infty\}$は$\mu_1$-零集合で、$F_1(x_1)=\int_{X_2}|f|d\mu_2(x_1\in X_1-N_1)(それ以外で0)$は$\mu_1$-可積分で、$\int_{X_1\times X_2}fd(\mu_1\otimes\mu_2)=\int_{X_1}F_1d\mu_1$
 
@@ -350,6 +382,8 @@ $$\mu^*:2^X\to[0,\infty],\ \mu^*(E)=\inf\{\sum_{n\in\bm{N}}\mu(A_n)\ |\ A_n\subs
     ・fが実数値可積分関数なら、実数値測度
     ・fが複素数値可積分関数なら、複素数値測度
 
+---
+
 ##### 実数値測度とHahn分解
 
 ・実数値測度$\nu$に関する非負な集合$P:\nu(E\cap P)\ge0(\forall E\in\mathfrak{M})$
@@ -366,6 +400,8 @@ $$\mu^*:2^X\to[0,\infty],\ \mu^*(E)=\inf\{\sum_{n\in\bm{N}}\mu(A_n)\ |\ A_n\subs
 ・実数値測度$\nu:\mathfrak{M}\to\bm{R}$に対して、$X$の可測分割$P,N$でそれぞれ非負、非正であるものが存在する（Hahn分解）
 
     ・N=P^c
+
+---
 
 ##### 実数値測度とJordan分解
 
@@ -399,6 +435,8 @@ $$\mu^*:2^X\to[0,\infty],\ \mu^*(E)=\inf\{\sum_{n\in\bm{N}}\mu(A_n)\ |\ A_n\subs
     ・複素数値測度νがμに対して絶対連続ならば、μ-可積分な複素数値関数であってν=μ_fを満たすものが存在する
     ・f_1,f_2が共にνのμに対するRadon-Nikodym微分ならば、a.e.でf_1=f_2
 
+---
+
 ##### 複素数値測度に対する全変動とその積分
 
 ・複素数値測度$\nu$に対する全変動$|\nu|:\mathfrak{M}\to[0,\infty]$
@@ -420,10 +458,45 @@ $$\mu^*:2^X\to[0,\infty],\ \mu^*(E)=\inf\{\sum_{n\in\bm{N}}\mu(A_n)\ |\ A_n\subs
     ・μ-可積分関数f、|μ_f|-可積分関数g（このとき、複素数値可測関数gに対して、gがμ_f-可積分⇔fgがμ-可積分）
     ・複素数値測度νと|ν|-可積分関数f、|ν_f|-可積分関数g、ν_fと複素数値測度νに関する積分（このとき、複素数値可測関数gに対して、gが|ν_f|-可積分⇔fgが|ν|-可積分）
 
-## Radon測度
+---
 
+## 局所コンパクト空間 $X$ 上のRadon測度
 
+    ・Borel測度：可測空間(Y,B_Y)上の測度
 
+・コンパクト集合$K$に対して、
+$$f\prec K\iff f\in C_c(X),\ f:X\to[0,1],\ f(x)=1\ (\forall x\in K)$$
+
+→開集合 $U$に対して、
+$$f\prec U\iff f\in C_c(X),\ f:X\to[0,1],\ suppf\subset U$$
+
+→ $K\subset U$なるコンパクト集合$K$と開集合$U$に対して、
+$$K\prec f\prec U\iff f\in C_c(X),\ f:X\to[0,1],\ f(x)=1\ (\forall x\in K),\ suppf\subset U$$
+
+→任意の$K\subset U$なるコンパクト集合$K$と開集合$U$に対して、$K\prec f\prec U$なる$f$が存在する
+
+    ・Urysohn
+
+##### Radon測度 $\mu:\mathfrak{B}_X\to[0\to\infty]$
+
+・任意のコンパクト集合$K$に対して、$\mu(K)<\infty$
+
+→ $\mu(E)=\inf\{\mu(V)\ |\ E\subset V{なる開集合}\}$
+
+    ・外部正則性
+
+→ $\mu(E)<\infty$または $E$ が開集合の時、
+$\mu(E)=\sup\{\mu(K)\ |\ K\subset E{なるコンパクト集合}\}$
+
+    ・内部正則性
+
+---
+
+・
+
+##### Radon汎関数とRiesz-Markov-角谷の表現定理
+
+・
 
 ---
 

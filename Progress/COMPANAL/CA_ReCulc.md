@@ -23,3 +23,11 @@
 ## 定積分
 
 ・$\int_0^{\pi}\frac{\sin\theta'}{\sqrt{r^2+r'^2-2rr'\cos\theta'}}d\theta'=\frac{1}{rr'}(r+r'-|r-r'|)\quad(r,r'>0)$
+
+---
+
+## 不定積分
+
+・$$\int \frac{e^x}{x}$$
+
+    なぞな関数出てきた、Ei(x)?
