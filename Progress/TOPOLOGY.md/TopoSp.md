@@ -1,3 +1,26 @@
+- [位相空間](#位相空間)
+        - [稠密性](#稠密性)
+        - [連結性](#連結性)
+  - [部分空間](#部分空間)
+  - [直積位相空間](#直積位相空間)
+  - [ネット](#ネット)
+      - [始位相](#始位相)
+  - [フィルター](#フィルター)
+  - [第一可算空間と点列](#第一可算空間と点列)
+        - [点列による特徴づけ](#点列による特徴づけ)
+        - [点列コンパクト](#点列コンパクト)
+  - [局所コンパクトHausdorff空間](#局所コンパクトhausdorff空間)
+  - [コンパクト空間](#コンパクト空間)
+        - [ネットによる特徴づけ](#ネットによる特徴づけ)
+        - [コンパクト集合](#コンパクト集合)
+  - [コンパクトHausdorff空間](#コンパクトhausdorff空間)
+  - [距離空間 $X$](#距離空間-x)
+        - [位相的性質](#位相的性質)
+        - [全有界、完備性](#全有界完備性)
+        - [一様連続、一様収束](#一様連続一様収束)
+
+
+
 # 位相空間
 
 ・開集合の和集合は非可算無限でよい
@@ -113,7 +136,7 @@ $$\{\bigcap_{i=1}^n f_{j_i}^{-1}(U_i)\ |\ n\in\bm{N},j_0,...,j_n\in J,u_i\in\mat
 
 ---
 
-## 第一可算空間 $X$ と点列 $(x_n)_{n\in\bm{N}}$
+## 第一可算空間と点列
 
 ・$x\in X$が可算な基本近傍系を持つならば、
 $x$の任意の近傍 $V$ に対して、$B_n\subset V$ なる $n\in\bm{N}$が存在して、$B_{n+1}\subset B_{n}$
@@ -160,31 +183,32 @@ $X$がコンパクト$\iff X$が点列コンパクト
 
 ・$\forall x\in X$は閉包がコンパクトな開近傍を持つ
 
-→ 
-コンパクト集合$K\subset X,x\in K^c$に対して、
+- コンパクト集合$K\subset X,x\in K^c$に対して、
 $$x\in U,K\subset V,U\cap V=\phi$$を満たす開集合$U,V$が存在する
 
-→ 
-$K\subset U$なるコンパクト集合$K$と開集合$U$に対して、$$K\subset V\subset\overline{V}\subset U$$なる閉包がコンパクトな開集合$V$が存在する
+- $K\subset U$なるコンパクト集合$K$と開集合$U$に対して、$$K\subset V\subset\overline{V}\subset U$$なる閉包がコンパクトな開集合$V$が存在する
 
 ---
+
+##### Urysohnの補題
 
 ・$K\subset U$なるコンパクト集合$K$と開集合$U$に対して、$$f:X\to [0,1],\quad f(x)=1\ (\forall x\in K),\quad suppf\subset U$$なる $suppf$がコンパクトな連続関数が存在する
 
     ・Urysohnの補題
 
-→
-$K\subset \bigcup_{i=1}^n U_i$なるコンパクト集合$K$と開集合$U_1,...,U_n$に対して、$$f:X\to [0,1],\quad \sum_{j=1}^n f_j=1\ (\forall x\in K),\quad suppf_j\in U_j$$なる $suppf_j$がコンパクトな連続関数$f_1,...,f_n$が存在する
+- $K\subset \bigcup_{i=1}^n U_i$なるコンパクト集合$K$と開集合$U_1,...,U_n$に対して、$$f:X\to [0,1],\quad \sum_{j=1}^n f_j=1\ (\forall x\in K),\quad suppf_j\in U_j$$なる $suppf_j$がコンパクトな連続関数$f_1,...,f_n$が存在する
 
 ---
 
-・$\infty\notin X$に対して、$$\tilde{X}=X\cup\{\infty\},\quad\tilde{\mathcal{O}}=\{U\subset\tilde{X}\ |\ \infty\in U,\ \tilde{X}-U\subset X{はコンパクト}\}\cup\mathcal{O}$$と定めると定義する
+##### 一点コンパクト化
+
+・$\infty\notin X$に対して、$$\tilde{X}=X\cup\{\infty\},\quad\tilde{\mathcal{O}}=\{U\subset\tilde{X}\ |\ \infty\in U,\ \tilde{X}-U\subset X{はコンパクト}\}\cup\mathcal{O}$$と定める
 
     ・一点コンパクト化
 
-→ $\tilde{\mathcal{O}}$は$\tilde{X}$の位相
-→ $\mathcal{O}$は$\tilde{\mathcal{O}}$の相対位相
-→ $\tilde{X}$はコンパクトHausdorff空間
+- $\tilde{\mathcal{O}}$は$\tilde{X}$の位相
+- $\mathcal{O}$は$\tilde{\mathcal{O}}$の相対位相
+- $\tilde{X}$はコンパクトHausdorff空間
 
 ---
 
