@@ -1,8 +1,48 @@
-# 測度論
+- [一章](#一章)
+  - [測度論の基礎](#測度論の基礎)
+        - [σ-集合族](#σ-集合族)
+        - [可測関数](#可測関数)
+        - [Borel集合族](#borel集合族)
+- [二章](#二章)
+  - [実数値可測関数](#実数値可測関数)
+        - [拡張実数](#拡張実数)
+        - [$R,C,R^n$値関数](#rcrn値関数)
+        - [可測関数のなすベクトル空間](#可測関数のなすベクトル空間)
+  - [測度と積分](#測度と積分)
+        - [非負値可測単関数の積分](#非負値可測単関数の積分)
+        - [非負値可測関数の積分](#非負値可測関数の積分)
+        - [実数値可測関数の積分](#実数値可測関数の積分)
+        - [複素数値可測関数の積分](#複素数値可測関数の積分)
+        - [測度論の基本定理](#測度論の基本定理)
+- [三章](#三章)
+  - [有限加法的測度](#有限加法的測度)
+        - [半集合代数、有限加法族、単調族、σ-有限性](#半集合代数有限加法族単調族σ-有限性)
+        - [有限加法的測度、σ-加法的測度、σ-有限測度](#有限加法的測度σ-加法的測度σ-有限測度)
+        - [Caratheodory外測度](#caratheodory外測度)
+        - [Tonelliの定理、Fubiniの定理](#tonelliの定理fubiniの定理)
+- [四章](#四章)
+  - [複素数値測度での積分](#複素数値測度での積分)
+        - [複素数値測度](#複素数値測度)
+        - [実数値測度とHahn分解](#実数値測度とhahn分解)
+        - [実数値測度とJordan分解](#実数値測度とjordan分解)
+        - [絶対連続とRadon-Nikodymの定理、Radon-Nikodym微分](#絶対連続とradon-nikodymの定理radon-nikodym微分)
+        - [複素数値測度に対する全変動とその積分](#複素数値測度に対する全変動とその積分)
+- [五章](#五章)
+  - [局所コンパクト空間 $X$ 上のRadon測度](#局所コンパクト空間-x-上のradon測度)
+        - [Radon測度](#radon測度)
+        - [Radon汎関数とRiesz-Markov-角谷の表現定理](#radon汎関数とriesz-markov-角谷の表現定理)
+        - [第二可算性とRadon測度](#第二可算性とradon測度)
+- [六章](#六章)
+  - [Lebesgue測度](#lebesgue測度)
+- [七章](#七章)
+  - [Bochner積分](#bochner積分)
+
+
+# 一章
 
 ## 測度論の基礎
 
-##### $\sigma-$集合族
+##### σ-集合族
 
 ・$\sigma-$加法族 $\mathfrak{M}$ 、可測空間 $(X,\mathfrak{M})$ 、可測集合 $E\in\mathfrak{M}$（↔位相、位相空間、開集合）
 
@@ -15,12 +55,6 @@
 
 ---
 
-・Borel集合族 $\mathfrak{B}$、Borel集合 $E\in\mathfrak{B}$
-
-    ・位相Oから生成されるσ加法族
-
----
-
 ##### 可測関数
 
 ・可測関数$f^{-1}(\forall E_2)\in\mathfrak{M}_1$（↔連続関数）
@@ -29,17 +63,33 @@
 
 ---
 
+##### Borel集合族
+
+・Borel集合族 $\mathfrak{B}$、Borel集合 $E\in\mathfrak{B}$
+
+    ・位相Oから生成されるσ加法族
+
 ・Borel写像 $f$
 
     ・可測関数と同じ
 
-→連続関数はBorel写像
+- 連続関数はBorel写像
+
+・Borel測度：可測空間(Y,B_Y)上の測度
 
 ---
+---
+---
 
-#### 可測関数 $f:X\to [-\infty,\infty],\mathbb{R},\mathbb{C},\mathbb{R}^N$
+# 二章
 
-##### 拡張実数$[-\infty,\infty]=\mathbb{R}\cup\{-\infty,\infty\}$（複素数の一点コンパクト化ではない）
+## 実数値可測関数 
+$$\bm{f:X\to [-\infty,\infty],\mathbb{R},\mathbb{C},\mathbb{R}^N}$$
+
+##### 拡張実数
+$$\bm{[-\infty,\infty]=\mathbb{R}\cup\{-\infty,\infty\}}$$
+
+    （複素数の一点コンパクト化ではない）
 
 ・順序
 
@@ -83,7 +133,7 @@
 
 ---
 
-##### $\mathbb{R,C,R^n}$値関数
+##### $R,C,R^n$値関数
 
 ・可測性
 
@@ -100,13 +150,18 @@
     ・f_+、f_-、|f|、|f|^p（pは非負実数）は可測
     ・複素数値関数において、積は可測
 
+- 可測関数列 $f_n:X\to[-\infty,\infty]$ に対して、その上極限、下極限は可測。よって、各点収束先 $f_n\to f$ も可測
+
+---
+
 ・指示関数$\chi_E:X\to \mathbb{R}\ (E\subset X)$
 
     ・可測集合の指示関数は可測
 
 ---
 
-##### 可測関数のなすベクトル空間 $\mathcal{L}(X,\mathfrak{M})=\{f:X\to\bm{C}\ |\ f{は可測}\}$
+##### 可測関数のなすベクトル空間 
+$$\bm{\mathcal{L}(X,\mathfrak{M})=\{f:X\to\bm{C}\ |\ f{は可測}\}}$$
 
 ・可測単関数のなすベクトル空間
 $$\mathcal{S}(X,\mathfrak{M})=span\{\chi_E |\ E\in\mathfrak{M}\}$$
@@ -177,7 +232,10 @@ $$f_n(x)=\sum_{k=1}^{n2^n}\frac{k-1}{2^n}\chi_{\frac{k-1}{2^n}\le f\le\frac{k}{2
 
 ・$g$を非負値可測単関数、$f_n$を非負値可測単関数の単調増加列とし、$g\le\sup f_n$とする。このとき、$\int_X gd\mu\le\sup\int_X f_nd\mu$
 
-##### 非負値可測関数$f:X\to[0,\infty]$の積分
+---
+
+##### 非負値可測関数の積分
+$$\bm{f:X\to[0,\infty]}$$
 
 ・定義
 
@@ -203,6 +261,8 @@ $$f_n(x)=\sum_{k=1}^{n2^n}\frac{k-1}{2^n}\chi_{\frac{k-1}{2^n}\le f\le\frac{k}{2
     ・非負値可測関数fに対して、積分0⇔μ-a.e.x∊Xでf(x)=0
     ・非負値可測関数fに対して、積分が有限(<∞)⇔μ-a.e.x∊Xでf(x)は有界(<∞)
 
+---
+
 ##### 実数値可測関数の積分
 
 ・$\mu$-可積分
@@ -219,6 +279,8 @@ $$f_n(x)=\sum_{k=1}^{n2^n}\frac{k-1}{2^n}\chi_{\frac{k-1}{2^n}\le f\le\frac{k}{2
     ・実数R上ベクトル空間
     ・∫:L→RはR上線形写像（可積分関数に対する積分の線形性）
 
+---
+
 ##### 複素数値可測関数の積分
 
 ・$\mu$-可積分
@@ -226,7 +288,7 @@ $$f_n(x)=\sum_{k=1}^{n2^n}\frac{k-1}{2^n}\chi_{\frac{k-1}{2^n}\le f\le\frac{k}{2
     ・絶対値とったやつの積分が有限
     ・Ref,Imfの積分がともに有限、可積分であることと同値
 
-・定義$\int_X fd\mu=\int_X\mathrm{Re} fd\mu+i\int_X\mathrm{Im}fd\mu\ (f:X\to\bm{R})$
+・定義$\int_X fd\mu=\int_X\mathrm{Re} (f)d\mu+i\int_X\mathrm{Im}(f)d\mu\ (f:X\to\bm{R})$
 
     ・fが実数値関数であるときと整合する
 
@@ -242,17 +304,26 @@ $$f_n(x)=\sum_{k=1}^{n2^n}\frac{k-1}{2^n}\chi_{\frac{k-1}{2^n}\le f\le\frac{k}{2
 
 ##### 測度論の基本定理
 
-・非負値可測関数列$f_n$に対して、$\int_X\sup_{n\in\bm{N}}\inf_{k\ge n} f_kd\mu\le\sup_{n\in\bm{N}}\inf_{k\ge n} \int_X f_kd\mu$
+・非負値可測関数列 $f_n$ に対して、
+$$\int_X\sup_{n\in\bm{N}}\inf_{k\ge n} f_kd\mu\le\sup_{n\in\bm{N}}\inf_{k\ge n} \int_X f_kd\mu$$
+<br>
 
 ・$f_n$を複素数値可測関数の列とし、$\forall x\in X{で}f=\lim f_n\in\bm{C}$かつ、
 非負値可積分関数であって$\forall n\in\bm{N},\forall x\in X{で}|f_n(x)|\le h(x)$を満たすものが存在するとする。
-このとき、$f,f_n$は可積分であって、$\int_X fd\mu=\lim_{n\to\infty}\int_X f_nd\mu$
+このとき、$f,f_n$は可積分であって、
+$$\int_X fd\mu=\lim_{n\to\infty}\int_X f_nd\mu$$
 
     ・優収束定理
 
 ---
+---
+---
 
-##### 半集合代数、有限加法族、単調族、$\sigma$-有限性
+# 三章
+
+## 有限加法的測度
+
+##### 半集合代数、有限加法族、単調族、σ-有限性
 
 ・半集合代数$\mathcal{I}$
 
@@ -288,7 +359,7 @@ $$f_n(x)=\sum_{k=1}^{n2^n}\frac{k-1}{2^n}\chi_{\frac{k-1}{2^n}\le f\le\frac{k}{2
 
 ---
 
-##### 有限加法的測度、$\sigma$-加法的測度、$\sigma$-有限測度
+##### 有限加法的測度、σ-加法的測度、σ-有限測度
 
 ・有限加法的測度、$\sigma$-加法的測度$\mu_0:\mathcal{I}\to[0,\infty]\ (\mathcal{I}{は半集合代数})$
 
@@ -298,11 +369,11 @@ $$f_n(x)=\sum_{k=1}^{n2^n}\frac{k-1}{2^n}\chi_{\frac{k-1}{2^n}\le f\le\frac{k}{2
 
 ・有限加法族$\mathcal{F}$上の有限加法的測度$\mu:\mathcal{F}\to[0,\infty]\ (\mathcal{A}{は有限加法族})$
 
-→$A\subset B$ならば$\mu(A)\le \mu(B)$
+- $A\subset B$ならば$\mu(A)\le \mu(B)$
 
-→$A_1,...,A_n\subset\mathcal{F}$に対して$\mu(\bigcup A_i)\le\sum\mu(A_i)$
+- $A_1,...,A_n\subset\mathcal{F}$に対して$\mu(\bigcup A_i)\le\sum\mu(A_i)$
 
-→$\sigma$-加法的測度ならば、集合列 $A_n,\ \bigcup A_n\in\mathcal{F}$ に対して$\mu(\bigcup A_n)\le\sum A_n$
+- $\sigma$-加法的測度ならば、集合列 $A_n,\ \bigcup A_n\in\mathcal{F}$ に対して$\mu(\bigcup A_n)\le\sum A_n$
 
 ---
 
@@ -342,28 +413,43 @@ $$\mu^*:2^X\to[0,\infty],\ \mu^*(E)=\inf\{\sum_{n\in\bm{N}}\mu(A_n)\ |\ A_n\subs
 
 ##### Tonelliの定理、Fubiniの定理
 
-・直積測度$\otimes_{j=1}^N\mu_j:\bigotimes\mathfrak{M}\to[0,\infty]$（$X_i,\mathfrak{M}_i,\mu_i\ (i=1,...,N)$は$\sigma$-有限な測度）
+・直積測度：$$\otimes_{j=1}^N\mu_j:\otimes\mathfrak{M}\to[0,\infty],\quad X_i,\mathfrak{M}_i,\mu_i\ (i=1,...,N){は}\sigma{-有限な測度})$$
 
-    ・μ(E_1×...×E_n)=μ_1(E_1)...μ_N(E_N)を満たすものがただ一つ存在する（直積測度）
+- $$μ(E_1×...×E_n)=μ_1(E_1)...μ_N(E_N)$$を満たすものがただ一つ存在する（直積測度）
 
-・$(X_i,\mathfrak{M}_i,\mu_i)\ (i=1,...,N)$を$\sigma$-有限な測度空間、$f:X_1\times...\times X_N\to[0,\infty]$を非負値可測関数とする。このとき、$X_1\times...\times \tilde X_k\times...\times X_N\to[0,\infty],(x_1,...,\tilde x_k,...,x_N)\mapsto\int_{X_k}f(x_1,...,x_k,...,x_N)d\mu_k$は可測関数である
+---
 
-・$(X_i,\mathfrak{M}_i,\mu_i)\ (i=1,...,N)$を$\sigma$-有限な測度空間、$f:X_1\times...\times X_N\to[0,\infty]$を非負値可測関数、$\tau$を$n$次の置換とする。このとき、$\int_{\prod_{k=1}^N X_k}fd\otimes_{j=1}^N\mu_j=\int_{X_{\tau(1)}}(...(\int_{X_{\sigma(N)}}f(x_1,...,x_N)d\mu_{\sigma(N)})...)d\mu_{\sigma(1)}$（Tonelliの定理）
+・$(X_i,\mathfrak{M}_i,\mu_i)\ (i=1,...,N)$を$\sigma$-有限な測度空間、$f:X_1\times...\times X_N\to[0,\infty]$を非負値可測関数とする。
+このとき、$$\Phi:X_1\times...\times \tilde X_k\times...\times X_N\to[0,\infty],\\\ \\(x_1,...,\tilde x_k,...,x_N)\mapsto\int_{X_k}f(x_1,...,x_k,...,x_N)d\mu_k$$は可測関数である
+
+・$(X_i,\mathfrak{M}_i,\mu_i)\ (i=1,...,N)$を$\sigma$-有限な測度空間、$f:X_1\times...\times X_N\to[0,\infty]$を非負値可測関数、$\tau$を$n$次の置換とする。
+このとき、$$\int_{\prod_{k=1}^N X_k}fd\otimes_{j=1}^N\mu_j=\int_{X_{\tau(1)}}\left(...\left(\int_{X_{\sigma(N)}}f(x_1,...,x_N)d\mu_{\sigma(N)}\right)...\right)d\mu_{\sigma(1)}$$
 
     ・このとき累次積分の各被積分部分は意味を持つ
+    ・Tonelliの定理
 
 ---
 
-・$(X_1,\mathfrak{M}_1,\mu_1)\ ,(X_2,\mathfrak{M}_2,\mu_2)$を$\sigma$-有限な測度空間、$f\in\mathcal{L}(X_1\times X_2,\mathfrak{M}_1\otimes\mathfrak{M}_2,\mu_1\otimes\mu_2)$とする。このとき、$N_1=\{x_1\in X_1\ |\ \int_{X_2}|f|d\mu_2=\infty\}$は$\mu_1$-零集合で、$F_1(x_1)=\int_{X_2}|f|d\mu_2(x_1\in X_1-N_1)(それ以外で0)$は$\mu_1$-可積分で、$\int_{X_1\times X_2}fd(\mu_1\otimes\mu_2)=\int_{X_1}F_1d\mu_1$
+・$(X_1,\mathfrak{M}_1,\mu_1)\ ,(X_2,\mathfrak{M}_2,\mu_2)$を$\sigma$-有限な測度空間、$f\in\mathcal{L}(X_1\times X_2,\mathfrak{M}_1\otimes\mathfrak{M}_2,\mu_1\otimes\mu_2)$とする。
 
-    ・fは複素数値可積分関数
-    ・定理は対称に成り立つ
+- $N_1=\{x_1\in X_1\ |\ \int_{X_2}|f|d\mu_2=\infty\}$は$\mu_1$-零集合
+- $$F_1(x_1)=\begin{cases}
+\int_{X_2}|f|d\mu_2 & (x_1\in X_1-N_1) \\
+0 & (x_1\in N_1)
+\end{cases}$$は$\mu_1$-可積分
+- $$\int_{X_1\times X_2}fd(\mu_1\otimes\mu_2)=\int_{X_1}F_1d\mu_1$$
+
+        ・fは複素数値可積分関数
+        ・定理は対称に成り立つ
 
 ---
+
+# 四章
 
 ## 複素数値測度での積分
 
-##### 複素数値測度$\nu\to\mathfrak{M}\to\bm{C}$
+##### 複素数値測度
+$$\bm{\nu:\mathfrak{M}\to\bm{C}}$$
 
 ・定義
 
@@ -460,50 +546,158 @@ $$\mu^*:2^X\to[0,\infty],\ \mu^*(E)=\inf\{\sum_{n\in\bm{N}}\mu(A_n)\ |\ A_n\subs
 
 ---
 
+# 五章
+
 ## 局所コンパクト空間 $X$ 上のRadon測度
 
-    ・Borel測度：可測空間(Y,B_Y)上の測度
-
 ・コンパクト集合$K$に対して、
-$$f\prec K\iff f\in C_c(X),\ f:X\to[0,1],\ f(x)=1\ (\forall x\in K)$$
+$$K\prec f\iff f\in C_c(X),\ f:X\to[0,1],\ f(x)=1\ (\forall x\in K)$$
 
-→開集合 $U$に対して、
+- 開集合 $U$に対して、
 $$f\prec U\iff f\in C_c(X),\ f:X\to[0,1],\ suppf\subset U$$
 
-→ $K\subset U$なるコンパクト集合$K$と開集合$U$に対して、
+- $K\subset U$なるコンパクト集合$K$と開集合$U$に対して、
 $$K\prec f\prec U\iff f\in C_c(X),\ f:X\to[0,1],\ f(x)=1\ (\forall x\in K),\ suppf\subset U$$
 
-→任意の$K\subset U$なるコンパクト集合$K$と開集合$U$に対して、$K\prec f\prec U$なる$f$が存在する
+- 任意の$K\subset U$なるコンパクト集合$K$と開集合$U$に対して、$K\prec f\prec U$なる$f$が存在する
 
-    ・Urysohn
+        ・Urysohn
 
-##### Radon測度 $\mu:\mathfrak{B}_X\to[0\to\infty]$
+・開集合 $U_1\subset U_2$ に対して、
+$f\prec U_1\Rightarrow f\prec U_2$
 
-・任意のコンパクト集合$K$に対して、$\mu(K)<\infty$
-
-→ $\mu(E)=\inf\{\mu(V)\ |\ E\subset V{なる開集合}\}$
-
-    ・外部正則性
-
-→ $\mu(E)<\infty$または $E$ が開集合の時、
-$\mu(E)=\sup\{\mu(K)\ |\ K\subset E{なるコンパクト集合}\}$
-
-    ・内部正則性
+・コンパクト集合　$K_1\subset K_2$ に対して、
+$K_2\prec f\Rightarrow K_1\prec f$
 
 ---
 
-・
+##### Radon測度
+$$\bm{\mu:\mathfrak{B}_X\to[0\to\infty]}$$
+
+・定義：局所コンパクトHausdorff空間 $X$ としたとき、
+
+- 任意のコンパクト集合$K$に対して、$\mu(K)<\infty$
+
+- $$\mu(E)=\inf\{\mu(V)\ |\ E\subset V{なる開集合}\}$$
+
+        ・外部正則性
+
+- $\mu(E)<\infty$または $E$ が開集合の時、
+$$\mu(E)=\sup\{\mu(K)\ |\ K\subset E{なるコンパクト集合}\}$$
+
+      ・内部正則性
+
+---
+
+・局所コンパクトHausdorff空間$X$、Radon測度 $\mu$ とする。
+
+- $f\in C_c(X)\Rightarrow f$ は $\mu$-可積分
+- 開集合 $V$ に対して、$$\mu(V)=\sup\{\int fd\mu\ |\ f\prec V\}$$
+- コンパクト集合 $K$ に対して、$$\mu(K)=\inf\{\int fd\mu\ |\ K\prec f\}$$
+
+---
 
 ##### Radon汎関数とRiesz-Markov-角谷の表現定理
 
-・
+・Radon汎関数：線形汎関数 $\Lambda: C_{c,\bm{R}}\to\bm{R}$ であって、$$\Lambda(f)\ge0\quad(f:0\to[0,\infty))$$
+
+- $f(x)\le g(x)\ (\forall x\in X)$ なる $f,g\in C_{c,\bm{R}}$ に対して、 $\Lambda(f)\le\Lambda(g)$
+
+        ・単調性
 
 ---
+
+・局所コンパクトHausdorff空間 $X$、Radon汎関数 $\Lambda$ とする。
+
+- $$\mu_0:\mathcal{O}_X\to[0,\infty],\quad\mu_0(V)=\sup\{\Lambda(f)\ |\ f\prec V\}$$
+
+
+- $$\mu^*:2^X\to[0,\infty],\quad \mu^*(E)=\inf\{\mu_0(V)\ |\ E\subset V\in\mathcal{O}_X\}$$
+ 
+- $$\mathfrak{M}_f=\{E\in2^X\ |\ \mu^*(E)<\infty,\ \mu^*(E)=\sup\{\mu^*(K),\ \forall{コンパクト集合} K\subset E\}\}$$　
+
+- $\mathfrak{M}=\{E\in 2^X\ |\ E\cap K\in\mathfrak{M}_f\ (\forall {コンパクト集合}K )\}$
+
+---
+
+・$\mu^*(\phi)=\mu_0(\phi)=0$ で、 $\mu^*,\mu_0$は単調：$E\subset F\Rightarrow \mu_0(E)\subset \mu_0(F),\ \mu^*(E)\subset \mu^*(F)$
+- $\mu^*$ は $\mu_0$ の拡張
+- $\mu_0$ は劣 $\sigma$-加法的：任意の開集合列 $U_n$ に対して、 $\mu_0(\bigcup U_n)\le\sum \mu_0(U_n)$
+- $\mu^*$は劣 $\sigma$-加法的：任意の集合列 $E_n$ に対して、 $\mu^*(\bigcup E_n)\le\sum \mu^*(E_n)\\\ \\$
+
+
+・コンパクト集合 $K$ に対して、 $K\in\mathfrak{M}_f$ かつ
+$\mu^*(K)=\inf\{\Lambda f\ |\ K\prec f\}=\inf\{\Lambda f\ |\ f\in C_{c,+}(X),\ f|_{K}=1\}$
+
+    ・C_{c,+}は台がコンパクトな連続で、実数値かつ非負ってこと
+
+- 開集合 $V$ に対して、
+$$\mu^*(V)=\sup\{\mu^*(K)\ |\ \forall{コンパクト集合}K\subset V\}$$したがって、$\mu^*(V)<\infty\Rightarrow V\in\mathfrak{M}_f\\\ \\$
+
+
+・非交叉列 $E_n\in\mathfrak{M}_f$ に対して、
+$\mu^*(\bigcup E_n)=\sum\mu^*(E_n)$
+さらに、$\mu^*(\bigcup E_n)<\infty$ ならば、$\bigcup E_n\in\mathfrak{M}_f\\\ \\$
+
+・$\forall E\in\mathfrak{M}_f,\forall\epsilon>0$ に対して、
+$K\subset E\subset V$ かつ $\mu^*(K-V)<\epsilon$ を満たすコンパクト集合 $K$、開集合 $V$ が存在する
+- $\mathfrak{M}$は$\sigma$-加法族であって、$\mathfrak{B}_X\subset\mathfrak{M}_f$
+- $\mathfrak{M}_f=\{E\in\mathfrak{M}\ |\ \mu^*(E)<\infty\}\\\ \\$
+
+・$\mu:\mathfrak{B}_X\ni B\to\mu^*(B)\in[0,\infty]$
+はRadon測度
+- $\Lambda(f)=\int fd\mu$
+
+    ・右辺はC_c,+以外の関数にも拡張できる！
+
+---
+
+・局所コンパクトHausdorff空間 $X$、Radon汎関数 $\Lambda$ とする。
+このとき、
+$$\Lambda(f)=\int fd\mu$$を満たすRadon測度 $\mu$ がただ一つ存在する
+
+    ・Riesz-Markov-角谷の表現定理
+
+---
+
+##### 第二可算性とRadon測度
+
+・$\sigma$-コンパクト：位相空間 $X$ に対して、
+$$X=\bigcup K_n$$ を満たすコンパクト集合列 $K_n$ が存在する
+
+- 第二可算空間は $\sigma$-コンパクト
+
+---
+
+・$\sigma$-コンパクトな局所コンパクトHausdorff空間 $X$、Radon測度 $\mu:\mathfrak{B}_X\to[0,\infty]$ とする。
+
+- $\forall B\in\mathfrak{B}_X,\epsilon>0$ に対して、$$F\subset B\subset U,\quad \mu(U-F)<\epsilon$$ なる閉集合 $F$、開集合 $U$ が存在する  
+<br>       
+
+
+- $\forall B\in\mathfrak{B}_X$ に対して、
+$\mu(B)=\sup\{\mu(K)\ |\ \forall{コンパクト集合}K\subset B\}$
+
+---
+
+・第二可算局所コンパクトHausdorff空間 $X$、Borel測度 $\mu:\mathfrak{B}_X\to[0,\infty]$ とする。
+このとき、$\mu(K)<\infty\ (\forall{コンパクト集合}K)$ ならば、$\mu$ はRadon測度
+
+
+---
+---
+---
+
+# 六章
 
 ## Lebesgue測度
 
 
 
 ---
+---
+---
+
+# 七章
 
 ## Bochner積分
