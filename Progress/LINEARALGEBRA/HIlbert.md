@@ -40,6 +40,10 @@ $$\sum_{j\in J}x_j=\lim_{F\to J}\sum_{j\in F}x_j$$
 
 ---
 
+・$$\sum_{n=1}^{\infty} \|u_n-u_{n-1}\|<\infty$$ ならば、$u_n$ はCauchy列 
+
+---
+
 ##### ノルム環$X$（多元環かつ積の不等式、$X$はノルム空間）（resp.Banach）
 
 ・ノルム環 $X\quad(X{は多元環かつノルム空間})$：

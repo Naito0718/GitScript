@@ -12,7 +12,7 @@ import numpy as np
 from mpl_toolkits.mplot3d import Axes3D
 import time
 
-def jacobi_poisson_solver(tol=1e-6, max_iter=1000):
+def jacobi_poisson_solver(tol=1e-2, max_iter=1000):
     """
     ヤコビ法を用いて二次元Poisson方程式を解く関数
 
@@ -25,7 +25,7 @@ def jacobi_poisson_solver(tol=1e-6, max_iter=1000):
     # 境界条件：非斉次項はなし
     """同心な2つの円板、外側接地、内側10V"""
 
-    omega=2 #SOR
+    omega=1.0 #SOR
 
     phi = np.zeros((N, N))
 

@@ -15,7 +15,8 @@ import time
 def jacobi_poisson_solver(tol=1e-6, max_iter=1000):
     """
     ヤコビ法を用いて二次元Poisson方程式を解く関数
-    
+
+    :rho: 与えられた関数rho(x, y)のnumpy配列
     :tol: 収束判定の許容誤差
     :max_iter: 最大反復回数
     :return: 解φ(x, y)のnumpy配列
@@ -23,6 +24,7 @@ def jacobi_poisson_solver(tol=1e-6, max_iter=1000):
 
     # 境界条件：非斉次項はなし
     """同心な2つの円板、外側接地、内側10V"""
+    omega=1.0
 
     phi = np.zeros((N, N))
 
@@ -44,7 +46,7 @@ def jacobi_poisson_solver(tol=1e-6, max_iter=1000):
     for _ in range(max_iter):
         for i in range(1, nx - 1):
             for j in range(1, ny - 1):
-                phi_new[i, j] = 0.25 * (phi[i + 1, j] + phi[i - 1, j] + phi[i, j + 1] + phi[i, j - 1] )
+                phi_new[i, j] = (1-omega)*phi[i,j]+omega*0.25 * (phi[i + 1, j] + phi_new[i - 1, j] + phi[i, j + 1] + phi_new[i, j - 1] )
 
         #境界条件
         for _ in range(0,N):
@@ -95,8 +97,8 @@ fig = plt.figure()
 ax = fig.add_subplot(111)
 
 # 等高線を描画
-contour = ax.contour(X, Y, sol, levels=np.arange(0,11), cmap='viridis')
-contour.clabel(fmt='%1.1f', fontsize=14)
+levels = np.linspace(np.min(sol), np.max(sol), 21)
+contour = ax.contour(X, Y, sol, levels=levels, cmap='viridis')
 
 # 円を描画
 circle = plt.Circle((o1[0], o1[1]), R1, color='blue', fill=False)  # 円を生成

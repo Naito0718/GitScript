@@ -30,7 +30,7 @@ def InTriangle (o, p,q,r):
 
 #ヤコビ法
 
-def jacobi_poisson_solver(tol=1e-2, max_iter=1000):
+def jacobi_poisson_solver(tol=1e-3, max_iter=1000):
     """
     ヤコビ法を用いて二次元Poisson方程式を解く
 
@@ -38,11 +38,9 @@ def jacobi_poisson_solver(tol=1e-2, max_iter=1000):
     :max_iter: 最大反復回数
     :return: 解のnumpy配列
     """
-
     # 境界条件：非斉次項はなし
     """三角形10V、二枚の接地された長方形"""
-
-    omega=1 #SOR
+ 
 
     phi = np.zeros((N, N))
 
@@ -51,7 +49,7 @@ def jacobi_poisson_solver(tol=1e-2, max_iter=1000):
             if InTriangle([_2*h,_*h],[trix[0],triy[0]],[trix[1],triy[1]],[trix[2],triy[2]])==True:
                 phi[_,_2]=Vt
 
-            elif ( 0<= _2*h <=1.5 and 0<= _*h <=17.5 )or (0<= _2*h <=19 and 18.5<= _*h <=20) :
+            elif ( rect1[0]<= _2*h <=width1 and rect1[1]<= _*h <=height1 )or (rect2[0]<= _2*h <=width2 and rect2[1]<= _*h <=20) :
                 phi[_,_2]=Vs
             else :
                 phi[_,_2]=(Vt+Vs)/2
@@ -67,11 +65,11 @@ def jacobi_poisson_solver(tol=1e-2, max_iter=1000):
                 if InTriangle([h*j,h*i],[trix[0],triy[0]],[trix[1],triy[1]],[trix[2],triy[2]])==True:
                     phi_new[i,j]=Vt
 
-                elif ( 0<= h*j <=1.5 and 0<= h*i <=17.5 )or (0<= h*j <=19 and 18.5<= h*i <=20) :
+                elif ( rect1[0]<= h*j <=width1 and rect1[1]<= h*i <=height1 )or (rect2[0]<= h*j <=width2 and rect2[1]<= h*i <=20) :
                     phi[i,j]=Vs
 
                 else :
-                    phi_new[i, j] = (1-omega)*phi[i,j]+omega*0.25 * (phi[i + 1, j] + phi_new[i - 1, j] + phi[i, j + 1] + phi_new[i, j - 1])
+                    phi_new[i, j] = 0.25 * (phi[i + 1, j] + phi_new[i - 1, j] + phi[i, j + 1] + phi_new[i, j - 1])
         diff = np.max(np.abs(phi_new - phi))
         if diff < tol:
             break
@@ -84,22 +82,22 @@ def jacobi_poisson_solver(tol=1e-2, max_iter=1000):
 # 定数
 
 L=20  #全体の正方形領域の一辺
-N=200  #分割数
+N=500  #分割数
 h=L/N   #分割幅
 
 # 境界条件：非斉次項はなし
 # 三角形の3つの頂点の座標
-trix = [11.5, 11.2 + h, 9]
-triy = [10.4, 9, 10.5+2*h]; Vt=10   #電位
+trix = [12.5, 12.4+h, 7.5]
+triy = [10.4, 8.8, 10.5+2*h]; Vt=10   #電位
 
 # 長方形
 rect1=[0, 0]  # 左下隅の座標
-width1 = 1.5      # 幅
-height1 = 17.5     # 高さ   
+width1 = 2.5     # 幅
+height1 = 17     # 高さ   
 
-rect2=[0, 18.5]  # 左下隅の座標
+rect2=[0, 17.5]  # 左下隅の座標
 width2 = 19      # 幅
-height2 = 1.5     # 高さ
+height2 = 2.5     # 高さ
 
 Vs=0    #接地
 
@@ -112,7 +110,7 @@ sol = jacobi_poisson_solver()
 end_time = time.time(); elapsed_time = end_time - start_time; print(f"計算時間: {elapsed_time}秒")
 """
 999
-計算時間: 133.11729383468628秒
+計算時間: 133.6秒
 """
 
 #グラフの描画

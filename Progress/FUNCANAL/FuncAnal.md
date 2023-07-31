@@ -1,21 +1,25 @@
-- [関数解析](#関数解析)
+- [一章](#一章)
   - [連続関数環](#連続関数環)
         - [連続関数環 $C(X)$](#連続関数環-cx)
         - [局所コンパクトHausdorff空間 $X$ 上の連続関数環](#局所コンパクトhausdorff空間-x-上の連続関数環)
+- [二章](#二章)
   - [作用素](#作用素)
         - [有界作用素](#有界作用素)
     - [Banach空間上の有界線形作用素](#banach空間上の有界線形作用素)
         - [有限次元ノルム空間 $X$](#有限次元ノルム空間-x)
     - [Hilbert空間上の有界線形作用素](#hilbert空間上の有界線形作用素)
         - [共役作用素](#共役作用素)
+- [三章](#三章)
   - [$L^p$空間](#lp空間)
         - [Holderの不等式、Minkowskiの不等式](#holderの不等式minkowskiの不等式)
         - [$L^p$空間](#lp空間-1)
+        - [$L^p$関数の可測単関数近似](#lp関数の可測単関数近似)
+        - [$L^p-L^q$ ペアリング](#lp-lq-ペアリング)
+- [四章](#四章)
   - [$l^p$空間](#lp空間-2)
 
 
-# 関数解析
-
+# 一章
 
 ## 連続関数環 
 
@@ -36,19 +40,18 @@ $$C(X)=\{X{上の連続複素数値関数全体}\}$$ は$\bm{C}$上可換単位�
 $$C_b(X)=\{f\in C(X)\ |\ f{は有界}\}$$は$C^*$-環で、$C(X)$の部分$*$-環
 
 ・位相空間$X$に対して、
-$$C_0(X)=\{f\in C(X)\ |\ \forall\epsilon>0{に対して}(|f|>\epsilon){はコンパクト}\}$$は$C_b(X)$の閉集合
+$$C_0(X)=\{f\in C(X)\ |\ \forall\epsilon>0{に対して}(|f|>\epsilon){はコンパクト}\}$$は$C_b(X)$の閉集合かつ $*$-イデアル
 
-    ・これ和で閉じる？スカラー倍、イデアル積、対合では閉じてる
+    ・補集合を考えるとよい！
 
 - そもそも $(|f|>\epsilon)$ は閉集合
 
 ・位相空間$X$に対して、 
-$$C_c(X)=\{f\in C(X)\ |\ suppf{はコンパクト}\}$$
-
-    ・イデアル積、スカラー倍では閉じてる
-
+$$C_c(X)=\{f\in C(X)\ |\ suppf{はコンパクト}\}$$は$*$-イデアル
 
 - $C_c(X)\subset C_0(X)$
+- $f\in C_{c}(X)$ に対して、$|f|\in C_c(X)$
+- $f,g\in C_{c,\bm{R}}(X)$ に対して、$\max\{f,g\}\in C_{c,\bm{R}}(X)$
 
 ---
 
@@ -65,6 +68,8 @@ $$f\in C_0(X)\iff \tilde{f}\in C(\tilde{X})$$
 
 
 ---
+
+# 二章
 
 ## 作用素
 
@@ -126,15 +131,18 @@ $$L(X)=\{f:X\to X\ |\ f{は線形作用素}\}$$は合成によって$\bm{C,R}$�
 
 ##### 有限次元ノルム空間 $X$
 
-・$X$を $\bm{C,R}$上有限次元ノルム空間、 $Y$ を $\bm{C,R}$ 上ノルム空間、 $T:X\to Y$ を線形作用素とすると、 $T$ は有界線形
+・$X$を $\bm{C,R}$上有限次元ノルム空間、 $Y$ を $\bm{C,R}$ 上ノルム空間、 $T:X\to Y$ を線形作用素とする。
+このとき、 $T$ は有界線形
 
 ---
 
 ### Hilbert空間上の有界線形作用素
 
+---
+
 ##### 共役作用素
 
----
+
 
 ・Hilbert空間$\mathcal{H_1,H_2}$、$T\in B(\mathcal{H_1,H_2})$ に対して、
 $$\|T\|=\|T^*\|,\quad (Tu,v)_{2}=(u,T^*v)_1$$であって$T^{*}\in B(\mathcal{H_2,H_1})$ であるものがただ一つ存在する
@@ -155,45 +163,106 @@ $$\Phi(u,v)=(u,T^* v),\quad \|\Phi\|=\|T^*\|$$を満たす $T^*\in B(\mathcal{H_
 
   
 ---
+---
+---
 
+# 三章
 
 ## $L^p$空間
 
 ##### Holderの不等式、Minkowskiの不等式
 
-・共役指数$1/p+1/q=1\ (p,q\in(1,\infty))$
+・共役指数：$\frac{1}{p}+\frac{1}{q}=1\quad (p,q\in(1,\infty))$
 
     ・(1,∞)の場合も含めてよい
-    ・x^{1-t}y^t≦(1-t)x+ty (t∊[0,1],x,y∊(0,∞))
-    ・(p-1)q=p
 
-・$(X,\mathfrak{M},\mu)$を測度空間、$p,q$を共役指数、$f,g:X\to[0,\infty]$を可測関数とすると、$\int_X fgd\mu\le(\int_Xf^pd\mu)^{\frac{1}{p}}(\int_Xg^qd\mu)^{\frac{1}{q}}$ （Holder不等式）
+- $$x^{1-t}y^t≦(1-t)x+ty \quad(t∊[0,1],x,y∊(0,∞))$$
 
+- $(p-1)q=p$
+
+---
+
+・測度空間 $(X,\mathfrak{M},\mu)$、共役指数 $p,q$、可測関数 $f,g:X\to[0,\infty]$ とする。
+このとき、$$\int_X fgd\mu\le\left(\int_Xf^pd\mu\right)^{\frac{1}{p}}\left(\int_Xg^qd\mu\right)^{\frac{1}{q}}$$
+
+    ・Holderの不等式
     ・可積分関数ではない
 
-・$(X,\mathfrak{M},\mu)$を測度空間、$p\in(1,\infty)$、$f,g:X\to[0,\infty]$を可測関数とすると、$(\int_X(f+g)^pd\mu)^{\frac{1}{p}}\le(\int_Xf^pd\mu)^{\frac{1}{p}}+(\int_Xg^pd\mu)^{\frac{1}{p}}$ (Minkowski不等式)
+・測度空間 $(X,\mathfrak{M},\mu),\quad p\in(1,\infty)$、可測関数 $f,g:X\to[0,\infty]$とする。
+このとき、$$\left(\int_X(f+g)^pd\mu\right)^{\frac{1}{p}}\le\left(\int_Xf^pd\mu\right)^{\frac{1}{p}}+\left(\int_Xg^pd\mu\right)^{\frac{1}{p}}$$ 
 
+    ・(Minkowski不等式)
     ・可積分関数ではない
+    ・三角不等式のこと
 
 ---
 
 ##### $L^p$空間
 
-・複素数値可測関数$\mathcal{L}(X,\mathfrak{M},\mu)$から構成される同値類$L(X,\mathfrak{M},\mu)$
+・複素数値可測関数のなすベクトル空間　$\mathcal{L}(X,\mathfrak{M},\mu)$　から構成される同値類の集合 ：
+$$L(X,\mathfrak{M},\mu)$$
 
-    ・f~g⇔a.e.f=g
-    ・複素数C上ベクトル空間で、積、複素共役がwell-defined
+- $f\sim g\iff f=g \quad (\mu-a.e.)$
 
-・$L^p(X,\mathfrak{M},\mu)=\{(\int_X|f|^pd\mu)^{\frac{1}{p}}<\infty\}\ (p\in[1,\infty))$
+- $\bm{C}$ 上ベクトル空間
+- $[f]+[g]=[f+g],\quad\alpha[f]=[\alpha f],\quad \overline{[f]}=[\overline{f}]$
 
-    ・L^pはノルム空間かつベクトル空間
-
-・$L^{\infty}(X,\mathfrak{M},\mu)=\{\inf\{\alpha\ge0\ |\ \mu((\alpha<|f|))=0\}<\infty\}$
-
-    ・本質的上限のこと、任意の実数より大きくなる点が零集合
-    ・L^∞はノルム空間かつベクトル空間
+- $f\sim g\Rightarrow f^p\sim g^p$
 
 ---
+
+・$$L^p(X,\mathfrak{M},\mu)=\left\{\left(\int_X|f|^pd\mu\right)^{\frac{1}{p}}<\infty\right\}\quad (p\in[1,\infty))$$
+
+- $L^p(X)$ はBanach空間
+- $f\in L^p(X)\Rightarrow f\in L^1(x)$
+
+<br>
+
+・$$L^{\infty}(X,\mathfrak{M},\mu)=\{\inf\{\alpha\in[0,\infty)\ |\ \mu((\alpha<|f|))=0\}<\infty\}\\\ \\
+{ただし、}\inf\{\sim\}{の中身が空ならば}\ \infty\ {とする}$$
+
+    ・本質的上限のこと、任意の実数より大きくなる点が零集合
+
+- $\mu((\|f\|_{L^{\infty}}<|f|))=0$
+- $L^∞(X)$ はBanach空間
+  
+---
+
+##### $L^p$関数の可測単関数近似
+
+・測度空間 $(X,\mathfrak{M},\mu),\quad p\in[1,\infty]$、$f\in\mathcal{L}(X,\mathfrak{M},\mu) $ とする。
+このとき、$$|s_n(x)|<|f(x)|\quad(\forall x,\forall n),\quad\lim_{n\to\infty}\|f-s_n\|_{L^p}<\epsilon$$を満たす可測単関数列 $s_n$ が存在する 
+
+- 可測空間 $(X,\mathfrak{M})$、有界な可測関数 $f:X\to\bm{C}$ とする。
+このとき、$f$ に一様収束する可測単関数列 $s_n$ が存在する
+
+---
+
+##### $L^p-L^q$ ペアリング
+
+・測度空間 $(X,\mathfrak{M},\mu)$、共役指数 $p,q\in[1,\infty]$、$f\in L^p,\ g\in L^q$ とする。
+このとき、$$\|fg\|_{L^1}\le \|f\|_{L^p}\|g\|_{L^q}$$
+
+    ・(1,∞)でもよい
+
+- 測度空間 $(X,\mathfrak{M},\mu)$、共役指数 $p,q\in[1,\infty]$ とする。
+このとき、$$\Psi:L^p\times L^q\to\bm{C},\quad\Psi(f,g)=\int fgd\mu$$は有界双線形汎関数
+
+      ・ノルムは1以下
+      ・手前で共役取ったら準双線形
+
+<br>
+
+- 測度空間 $(X,\mathfrak{M},\mu)$ とする。
+このとき、$f,g\in L^2(X)$に対して、
+$$(f,g)=\int \overline{f}gd\mu$$は内積
+
+---
+---
+---
+
+
+# 四章
 
 ## $l^p$空間
 

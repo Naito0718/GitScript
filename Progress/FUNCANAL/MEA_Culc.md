@@ -1,8 +1,7 @@
-# 測度論的な具体例、計算例
 
-## 集合、空間例
+# 可測空間
 
-##### $\sigma-$加法族 $\mathfrak{M}$
+##### ｓ
 
 ・$A$上の相対$\sigma$加法族：$\sigma(A)=\{A\cap E\ |\  E\in\mathfrak{M}\}$
 
@@ -71,7 +70,10 @@ $$\mathfrak{B}_{\bm{R}^n}=\sigma(\mathcal{O}_{\bm{R}^n})$$
 
     ・有限個の直積可測空間の性質
 
-##### $\bm{R}$上の測度 $m:\mathfrak{B}_{\bm{R}}\to[0,\infty]$
+---
+
+##### $\bm{R}$上の測度 
+$$m:\mathfrak{B}_{\bm{R}}\to[0,\infty]$$
 
 ・Radon汎関数 
 $$\Lambda :C_{c,\bm{R}}\to\bm{R},\quad \Lambda f=\int_I f(x)dx\quad(\mathrm{supp} f\subset I{なる任意の有界閉区間},\int{はRiemann積分})$$

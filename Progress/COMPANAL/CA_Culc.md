@@ -57,6 +57,17 @@ $Res (f,0,2k)=\frac{(-1)^k}{(2k-1)!}$
 
 ---
 
+・$\int_{0}^{2\pi}\log(1-2r\cos t+r^2)dt=\begin{cases}
+0 & (0\le r\le1)  \\
+4\pi\log r & (1<r) \\
+\end{cases}$
+
+    ・0~πまでの積分値の2倍
+- $\int_0^{\pi/2}\log\sin\theta d\theta=-\frac{\pi}{2}\log2$
+
+
+---
+
 ##### 有理関数 $\frac{P(x)}{Q(x)}$ の広義積分
 
 ・$\deg P+2\le\deg Q$かつ$Q(x)$が実軸上に零点を持たないとき

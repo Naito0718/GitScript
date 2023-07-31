@@ -1,8 +1,97 @@
+- [電磁気学](#電磁気学)
+  - [テクニック](#テクニック)
+    - [種々の偏微分方程式の解](#種々の偏微分方程式の解)
+    - [極座標ラプラス方程式](#極座標ラプラス方程式)
+    - [円柱座標ラプラス方程式](#円柱座標ラプラス方程式)
+    - [関数の級数展開](#関数の級数展開)
+    - [対称性を持つ系](#対称性を持つ系)
+        - [$z$軸周りで軸対称な系](#z軸周りで軸対称な系)
+        - [系が$z$軸方向に依存しないとき](#系がz軸方向に依存しないとき)
+  - [Maxwell方程式](#maxwell方程式)
+        - [Lorentz変換](#lorentz変換)
+  - [真空中の電磁波（なにもない）](#真空中の電磁波なにもない)
+        - [不変デルタ関数](#不変デルタ関数)
+        - [真空中](#真空中)
+        - [回折現象](#回折現象)
+        - [散乱現象](#散乱現象)
+  - [一般の電磁波](#一般の電磁波)
+        - [関数の特殊関数表示](#関数の特殊関数表示)
+        - [真空中](#真空中-1)
+        - [多重極放射](#多重極放射)
+  - [物質中の電磁波](#物質中の電磁波)
+        - [誘電体中の電磁波](#誘電体中の電磁波)
+        - [電磁波の反射と屈折](#電磁波の反射と屈折)
+        - [導体中の電磁波](#導体中の電磁波)
+
+
 # 電磁気学
+
+## テクニック
+
+### 種々の偏微分方程式の解
+
+    ・線形偏微分方程式は、特殊関数の完全性による変数分離法が許される！
+
+### 極座標ラプラス方程式
+$$\Delta\phi=\frac{1}{r^2}\frac{\partial}{\partial r}\left(r^2\frac{\partial\phi}{\partial r}\right)+\frac{1}{r^2\sin\theta}\frac{\partial}{\partial \theta}\left(\sin\theta\frac{\partial\phi}{\partial \theta}\right)+\frac{1}{r^2\sin^2\theta}\frac{\partial^2\phi}{\partial\phi^2}=0$$
+
+・解くべき方程式：
+$$\frac{d^2\Phi}{d\phi^2}+m^2\Phi=0\quad(m{は複素数かも})\\\ \\
+\frac{d}{dr}\left(r^2\frac{dR}{dr}\right)-n(n+1)R=0\\\ \\
+\frac{1}{\sin\theta}\frac{d}{d\theta}\left(\sin\theta\frac{d\Theta}{d\theta}\right)+\left\{n(n+1)-\frac{m^2}{\sin^2\theta}\right\}\Theta=0$$
+
+    ・変数分離した
+
+- $\Phi(\phi)=e^{\pm im\phi}$、したがって、$m=0,\pm1,\pm2,...$でなければならない
+
+- $R(r)=Ar^n+Br^{-n-1}$
+- $\Theta(\theta)=P_n^m(\cos\theta)\quad({ルジャンドル陪関数})$
+
+---
+
+・一般解：
+$$V(r,\theta,\phi)=\sum_{n,m} \left(A_nr^n+\frac{B_n}{r^{n+1}}\right)(C_m\cos m\phi+D_m\sin m\phi)P_n^m(\cos\theta)\\\ \\
+(n=0,1,...,\quad m=-l,-l+1,...,l-1,l)$$
+
+---
+
+### 円柱座標ラプラス方程式
+$$\Delta\phi=\frac{1}{r}\frac{\partial}{\partial r}\left(r\frac{\partial\phi}{\partial r}\right)+\frac{1}{r^2}\frac{\partial^2\phi}{\partial \theta^2}+\frac{\partial^2\phi}{\partial z^2}=0$$
+
+・解くべき方程式：
+$$\frac{d^2\Phi}{d\phi^2}+m^2\Phi=0\quad(m{は複素数かも})\\\ \\
+\frac{d}{dr}\left(r^2\frac{dR}{dr}\right)-n(n+1)R=0\\\ \\
+\frac{1}{\sin\theta}\frac{d}{d\theta}\left(\sin\theta\frac{d\Theta}{d\theta}\right)+\left\{n(n+1)-\frac{m^2}{\sin^2\theta}\right\}\Theta=0$$
+
+    ・変数分離した
+
+
+
+---
+
+### 関数の級数展開
+
+---
+
+### 対称性を持つ系
+
+##### $z$軸周りで軸対称な系
+
+一般解：
+$$V(r,\theta)=\sum_{n\ge0} \left(A_nr^n+\frac{B_n}{r^{n+1}}\right)P_n(\cos\theta)$$
+
+    ・m=0のとき
+
+---
+
+##### 系が$z$軸方向に依存しないとき
+
+
 
 ## Maxwell方程式
 
-##### Lorentz変換 $$ct'=\frac{1}{\sqrt{1-(\frac{v}{c})^2}}(ct-\frac{v}{c}x),\ x'=\frac{1}{\sqrt{1-(\frac{v}{c})^2}}(x-vt)$$
+##### Lorentz変換 
+$$ct'=\frac{1}{\sqrt{1-(\frac{v}{c})^2}}(ct-\frac{v}{c}x),\ x'=\frac{1}{\sqrt{1-(\frac{v}{c})^2}}(x-vt)$$
 
 ・ダランベルシャン $\square=\Delta-\frac{1}{c^2}\frac{\partial^2}{\partial t^2}$（ダランベルシャン）はLorentz変換で不変
 
@@ -19,7 +108,8 @@ $ct'=\gamma(ct-\beta x),\quad x'=\gamma(x-vt),\quad \gamma^2(1-\beta^2)=1$
 
 
 
-## 電磁波 $\rho(x,t)=i(x,t)=0$
+## 真空中の電磁波（なにもない） 
+$$\bm{\rho(x,t)=i(x,t)=0}$$
 
 ##### 不変デルタ関数
 ・$$D(x,t)=\frac{i}{2(2\pi)^3}\int_{-\infty}^{\infty}\frac{d^3k}{\omega(k)}[e^{i(k\cdot x-\omega(k)t)}-e^{i(k\cdot x-\omega(k) t)}]$$
@@ -53,7 +143,8 @@ D_{adv}(x-x',t-t')=\frac{1}{4\pi c}\frac{1}{|x-x'|}\delta(|x-x'|+c(t-t'))$$
 
 ---
 
-##### 真空中 $\epsilon_0,\mu_0$
+##### 真空中 
+$$\bm{\epsilon_0,\mu_0}$$
 
 ・解くべき方程式$$\left(\Delta-\frac{1}{c^2}\frac{\partial^2}{\partial t^2}\right)A(x,t)=0\\ \
 A(x,t_0)=f(x,t_0)\\ \
@@ -105,7 +196,8 @@ $$\psi(x,t)=\int_Vd^3x[D_{ret}(x-x',t-t_0)\frac{\partial\psi}{\partial t'}(x',t_
 
 
 
-## 有界な $\rho_e(x,t),i_e(x,t)$（近似：電荷、電流が半径$a$球面内に限られているとし、$\omega a/c<<1\iff cT>>a$）
+## 一般の電磁波
+$$\bm{\rho_e(x,t),i_e(x,t)}\\\bm{{近似：電荷、電流が半径}a{球面内に限られているとし、}}\\\bm{\omega a/c<<1\iff cT>>a}$$
 
     ・近似の物理的意味：放射電磁波の波長λが電荷、電流領域より十分大きい
     ・このとき、電磁波は放射する
@@ -118,7 +210,8 @@ $$\psi(x,t)=\int_Vd^3x[D_{ret}(x-x',t-t_0)\frac{\partial\psi}{\partial t'}(x',t_
 
 ---
 
-##### 真空中 $\epsilon_0,\mu_0$
+##### 真空中 
+$$\bm{\epsilon_0,\mu_0}$$
 
 ・解くべき方程式
 $$\Delta A(x,\omega)+\frac{\omega^2}{c^2}A(x,\omega)=-\mu_0i_e(x,\omega)\\ \
@@ -154,7 +247,8 @@ $$A(x,t)=\frac{\mu_0}{4\pi}\int_Vd^3x'\frac{i_e(x',t-\frac{|x-x'|}{c})}{|x-x'|}\
 
 ---
 
-##### 多重極放射 （分布が半径$a$内に限られているとし、$cT>>a$または$\frac{\omega a}{c}<<1$）
+##### 多重極放射 
+$$\bm{{分布が半径}a{内に限られているとし、}}\\\bm{cT>>a{または}\frac{\omega a}{c}<<1}$$
 
     ・放射電磁波の波長が存在領域より十分大きいとき
     ・このとき、積分で出てくる r'→0　とできる

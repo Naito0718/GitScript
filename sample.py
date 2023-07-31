@@ -85,8 +85,30 @@ end_time = time.time(); elapsed_time = end_time - start_time; print(f"計算時�
 計算時間: 84.79103565216064秒
 """
 
-#グラフの描画
 
+def plot_efield(ex, ey):
+    # 矢印を描画する点の間隔を指定
+    skip = 10
+
+    # 位置情報を作成
+    x = np.linspace(0, L, N)
+    y = np.linspace(0, L, N)
+    X, Y = np.meshgrid(x, y)
+
+    # 電場ベクトルの可視化
+    plt.quiver(X[::skip, ::skip], Y[::skip, ::skip], ex[::skip, ::skip], ey[::skip, ::skip], angles='xy', scale_units='xy', scale=1, color='red', label='Electric Field')
+
+    plt.legend()
+    plt.grid()
+    plt.draw()
+    plt.show()
+
+
+
+ex, ey = np.gradient(-sol, h)
+
+
+# グラフの描画
 x = np.linspace(0, L, N)
 y = np.linspace(0, L, N)
 X, Y = np.meshgrid(x, y)
@@ -95,15 +117,18 @@ fig = plt.figure()
 ax = fig.add_subplot(111)
 
 # 等高線を描画
-contour = ax.contour(X, Y, sol, levels=np.arange(0,11), cmap='viridis')
+contour = ax.contour(X, Y, sol, levels=np.arange(0, 11), cmap='viridis')
 contour.clabel(fmt='%1.1f', fontsize=14)
 
+# 電場ベクトルを描画
+ax.plot_efield(ex, ey)
+
 # 円を描画
-circle = plt.Circle((o1[0], o1[1]), R1, color='blue', fill=False)  # 円を生成
-ax.add_artist(circle)  # 円をグラフに追加
-  
-circle2 = plt.Circle((o2[0], o2[1]), r2, color='blue', fill=False)  
-ax.add_artist(circle2)  
+circle = plt.Circle((o1[0], o1[1]), R1, color='blue', fill=False)
+ax.add_artist(circle)
+
+circle2 = plt.Circle((o2[0], o2[1]), r2, color='blue', fill=False)
+ax.add_artist(circle2)
 
 # カラーバーを表示
 plt.colorbar(contour)
