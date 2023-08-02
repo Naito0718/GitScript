@@ -67,7 +67,7 @@ def jacobi_poisson_solver(tol=1e-2, max_iter=1000):
 # 定数
 
 L=20  #全体の正方形領域の一辺
-N=500  #分割数
+N=200  #分割数
 h=L/N   #分割幅
 
 # 境界条件：非斉次項はなし

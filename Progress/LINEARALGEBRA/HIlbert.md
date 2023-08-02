@@ -1,6 +1,24 @@
-# Hilbert空間論
+- [基本的な用語、性質](#基本的な用語性質)
+        - [ノルム空間](#ノルム空間)
+        - [総和](#総和)
+        - [ノルム環$X$（多元環かつ積の不等式、$X$はノルム空間）（resp.Banach）](#ノルム環x多元環かつ積の不等式xはノルム空間respbanach)
+        - [商ノルム](#商ノルム)
+        - [イデアル](#イデアル)
+- [セミノルム](#セミノルム)
+        - [セミノルム位相](#セミノルム位相)
+- [Banach空間論](#banach空間論)
+        - [コーシー列](#コーシー列)
+        - [有限次元](#有限次元)
+        - [商空間](#商空間)
+- [Hilbert空間](#hilbert空間)
+        - [用語](#用語)
+        - [CONS](#cons)
+- [Frechet空間](#frechet空間)
+        - [Frechet空間 $V$](#frechet空間-v)
+- [Sovolev空間　](#sovolev空間)
 
-## 基本的な用語、性質
+
+# 基本的な用語、性質
 
 ##### ノルム空間
 
@@ -12,7 +30,9 @@
 
 ---
 
-##### 総和 $\sum_{j\in J}x_j$
+##### 総和 
+
+$$\sum_{j\in J}x_j$$
 
 ・定義：ノルム空間 $X$,集合 $J$、対応 $x_j$、$J$ の有限部分集合に包含順序を入れた有向集合 $\mathcal{F}_J$に対して、
 ネット列 $(\sum_{j\in F}x_j)_{F\in\mathcal{F}_J}$が収束すること
@@ -44,7 +64,7 @@ $$\sum_{j\in J}x_j=\lim_{F\to J}\sum_{j\in F}x_j$$
 
 ---
 
-##### ノルム環$X$（多元環かつ積の不等式、$X$はノルム空間）（resp.Banach）
+##### ノルム環 $X$（多元環かつ積の不等式、$X$ はノルム空間）（resp.Banach）
 
 ・ノルム環 $X\quad(X{は多元環かつノルム空間})$：
 $\|xy\|\le\|x\|\|y\|$
@@ -55,7 +75,7 @@ $\|xy\|\le\|x\|\|y\|$
 ・$*$-環：$\ *:X\to X$（$X$は多元環）
 $(x+y)^*=x^*+y^*\\
 (\alpha x)^*=\bar{\alpha}x^*\\
-(xy)^*=y^*x^*
+(xy)^*=y^*x^*\\
 x^{**}=x$
 
     ・係数体はRかC
@@ -66,11 +86,11 @@ $\|x^*\|=\|x\|$
 
     ・Banach*-環も同様
 
-・$C*$-環 $X\quad(X{はBanach環かつ}*{-環})$
+・$C^*$-環 $X\quad(X{はBanach環かつ}*{-環})$
 $\|x^*x\|=\|x\|^2$
 
-→
-$C^*$-環ならばBanach$*$-環
+
+- $C^*$-環ならばBanach$*$-環
 
 ---
 
@@ -96,9 +116,11 @@ $I\subset X$が$\bm{C(R)}$ベクトル空間かつ、$\forall x\in X,\forall y\i
 ---
 ---
 
-## セミノルム 
+# セミノルム 
 
-##### セミノルム位相$$(p_a:X\to[0,\infty))_{(p,a)\in\mathcal{P}\times X}$$
+##### セミノルム位相
+
+$$(p_a:X\to[0,\infty))_{(p,a)\in\mathcal{P}\times X}$$
 
 ・ベクトル空間 $V$ に対して、セミノルム：$p:V\to [0,\infty),\quad p(x+y)\le p(x)+p(y),p(\alpha x)=|\alpha|p(x)$
 
@@ -127,7 +149,7 @@ $x_{\lambda}\to x\iff p(x_{\lambda}-x)\to0\ (\forall p)$
 ---
 ---
 
-## Banach空間論
+# Banach空間論
 
 ##### コーシー列
 
@@ -152,7 +174,7 @@ $x_n$ が $x$ に収束する部分列を持てば、$x_n$ は $x$ に収束す�
 ---
 ---
 
-## Hilbert空間 $\mathcal{H}$
+# Hilbert空間 
 
 ##### 用語
 
@@ -162,23 +184,15 @@ $x_n$ が $x$ に収束する部分列を持てば、$x_n$ は $x$ に収束す�
 
 - 中線定理：$\|u+v\|^2+\|u-v\|^2=2(\|u\|^2+\|v\|^2)$
 
----
+<br>
 
-・反線形写像：
-$T(u+v)=Tu+Tv,\quad T(\alpha u)=\bar{\alpha}Tu$
+・$\bm{C}$ 上ベクトル空間 $V,W$、準双線形写像 $\Psi:V\times V\to W$ とする。
+このとき、$$\Psi(u,v)=\frac{1}{4}\sum_{i=1}^3i^k\Psi(i^ku+v,i^ku+v)$$  
 
-- 準双線形写像：$\Phi(u,v)$で、第一引数で反線形、第二引数で線形
+    ・偏極恒等式
 
-- 有界双線形：$\|\Phi\|<\infty$
-$$\|\Phi\|=\sup\{\|\Phi(u,v)\|\  |\ \|u\|,\|v\|\le1\}=\sup\{\|\Phi(u,v)\ |\ \|u\|,\|v\|=1\}$$
+- ユニタリ作用素は内積を保つ：$(Uv_1,Uv_2)=(v_1,v_2)$
 
-・$\|\Phi(u,v)\|\le\|\Phi|\|u\|\|v\|$
-
-- 双線形写像は、有界ならば連続
-
-    ・準双線形も同様
-
-- 内積 $(\cdot)$ は直積位相で連続で、ノルムは $\|(\cdot)\|\le 1$
 
 ---
 
@@ -190,7 +204,37 @@ $$\|u-u_0\|=d(u,C)$$
 
 ---
 
-・直交：$(u,v)=0$
+##### 準双線形写像
+
+・反線形写像：
+$$T(u+v)=Tu+Tv,\quad T(\alpha u)=\bar{\alpha}Tu$$
+<br>
+
+・準双線形写像：$\Phi(u,v)$で、第一引数で反線形、第二引数で線形
+
+- 有界双線形：$\|\Phi\|<\infty$
+$$\|\Phi\|=\sup\{\|\Phi(u,v)\|\  |\ \|u\|,\|v\|\le1\}=\sup\{\|\Phi(u,v)\ |\ \|u\|,\|v\|=1\}$$
+
+・$\|\Phi(u,v)\|\le\|\Phi|\|u\|\|v\|$
+
+- 双線形写像は、有界ならば連続
+
+      ・準双線形も同様
+
+- 内積 $(\cdot)$ は直積位相で連続で、ノルムは $\|(\cdot)\|\le 1$
+
+---
+
+・ヒルベルト空間 $\mathcal{H}$、双対空間 $\mathcal{H}^*$に対して、
+$\mathcal{H}\ni \mapsto (v,\cdot)\in\mathcal{H}^*$
+は全単射反線形写像で、　$\|v\|=\|(v,\cdot)\|$
+
+    ・別に0でも成り立つ
+
+---
+
+##### 直交：$(u,v)=0$
+
 
 - 集合の直交 $(u,v)=0\quad (\forall u\in E,\forall v\in F)$
 
@@ -209,19 +253,73 @@ $\mathcal{H}=M\oplus M^{\perp}$
 
 ---
 
-・ヒルベルト空間 $\mathcal{H}$、双対空間 $\mathcal{H}^*$に対して、
-$\mathcal{H}\ni \mapsto (v,\cdot)\in\mathcal{H}^*$
-は全単射反線形写像で、　$\|v\|=\|(v,\cdot)\|$
+##### CONS
 
-    ・別に0でも成り立つ
+・内積空間　$V$ のONS $B_0$：互いに直交する単位ベクトルの集合 $B$。$e_j$　が単射なら添え字付けられているという。
 
+- 内積空間 $V$、$J$ によって添え字付けられた $V$ のONS $e_j$、$v\in V$ とする。
+このとき、$$\sum_{j\in J}|(e_j,v)|^2\le\|v\|^2$$特に、$$(e_j,v)\in l^2(J),\\\ \\ \|v-\sum_{j\in F}(e_j,v)e_j\|^2=\|v\|^2-\sum_{j\in F}|(e_j,v)|^2$$。
 
+        ・Besselの不等式
+
+---
+
+・Hilbert空間　$\mathcal{H}$ のCONS：ONS $B_0$ であって、$\overline{\mathrm{span}(B)}=\mathcal{H}$ を満たすもの。
+
+- Hilbert空間 $\mathcal{H}$、$J$ によって添え字付けられた $\mathcal{H}$ のONS $e_j\in B_0$、$v\in \overline{\mathrm{span}B_0}$ とする。
+このとき、$$\|v\|^2=\sum_{j\in J}|(e_j,v)|^2,\quad v=\sum_{j\in J}(e_j,v)e_j$$が成り立つ。さらに、$$U:\overline{\mathrm{span}B_0}\to l^2(J),\quad U(v)=(e_j,v)_{j\in J}$$はユニタリ作用素。
+
+        ・ユニタリ作用素はノルムを保存する線形同型写像
+
+- $J$ によって添え字付けられた CONS を持つHilbert空間 $\mathcal{H}$ に対して、
+$\mathcal{H}\cong l^2(J)$
+
+---
+
+・Hilbert空間 $\mathcal{H}$、$\mathcal{H}$ のONS $B_0$ に対して、
+$B_0\subset B$ なる $\mathcal{H}$ のCONS $B$ が存在する。
+
+    ・B_0を含むONS全体の集合は帰納的順序集合
+
+- Hilbert空間 $\mathcal{H}$、$\mathcal{H}$ のCONS $B_1,B_2$ に対して、
+$B_1$ と $B_2$ の濃度は等しい。
+<br>
+
+- Hilbert空間 $\mathcal{H}$ に対して、
+$\mathcal{H}{は可分}\iff \mathcal{H}{のCONSは可算}$
+
+---
+
+##### 直和Hilbert空間
+
+・空でない集合 $J$、$\bm{C}$ 上Banach空間 $X_j$、$(x_j)\in\Pi_{j\in J}X_j$ に対して、
+このとき、$$\|(x_j)_{j\in J}\|_p=\left(\sum_{j\in J} \|x_j\|_j^p\right)^{\frac{1}{p}}\\\ \\
+\|(x_j)_{j\in J}\|_{\infty}=\sup_{j\in J}\|x_j\|_j$$と定める。
+
+- $j\mapsto \|x_{j}\|$ は、数え上げ速度空間 $(J,2^J,\mu)$ に対する非負値可測関数
+<br>
+
+- $\|(x_j)_{j\in J}\|_p$ は、数え上げ速度空間 $(J,2^J,\mu)$ の $L^p(J)$ における $L^p$ ノルム
+
+- $$\bigoplus_{j\in J}^{(p)}X_j=\{(x_j)_{j\in J}\in\Pi_{j\in J}X_j\ |\ \|(x_j)_{j\in J}\|<\infty\}$$はBanach空間で、直積線形空間 $\Pi X_j$ の部分空間
+
+        ・l^p直和Banach空間
+
+---
+
+・空でない集合 $J$、$\bm{C}$ 上Hilbert空間 $\mathcal{H}_j$、$l^2$ 直和Banach空間 $\oplus_{j\in J}\mathcal{H}_j$ 、$u,v\in\oplus_{j\in J}\mathcal{H}_j$とする。
+このとき、$$(u,v)=\sum_{j\in J}(u_j,v_j)_j$$と定める。
+
+- $\sum_{j\in J}|(u_j,v_j)|\le\|u\|\|v\|$、特に、$(u_j,v_j)_{j\in J}\in l^1(J)$
+<br>
+
+- $\oplus_{j\in J}\mathcal{H}_j$ はHilbert空間
 
 ---
 ---
 ---
 
-## Frechet空間
+# Frechet空間
 
 ##### Frechet空間 $V$
 
@@ -238,4 +336,4 @@ $\mathcal{H}\ni \mapsto (v,\cdot)\in\mathcal{H}^*$
 ---
 ---
 
-## Sovolev空間　
+# Sovolev空間　

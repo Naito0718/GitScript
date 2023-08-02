@@ -17,6 +17,7 @@
         - [$L^p-L^q$ ペアリング](#lp-lq-ペアリング)
 - [四章](#四章)
   - [$l^p$空間](#lp空間-2)
+        - [数え上げ測度と $l^p$ 空間](#数え上げ測度と-lp-空間)
 
 
 # 一章
@@ -80,27 +81,28 @@ $$f\in C_0(X)\iff \tilde{f}\in C(\tilde{X})$$
 ・$\bm{C,R}$上ノルム空間 $X,Y$に対して、
 $$L(X,Y)=\{f:X\to Y\ |\ f{は線形作用素}\}$$はベクトル空間
 
-→有界線形作用素のなす空間：
+- 有界線形作用素のなす空間：
  $B(X,Y)=\{T\in L(X,Y)\ |\ \|T\|<\infty\}\\\ \\ 
 \|T\|=\sup\{\|T(x)\|_Y\ |\ x\in X,\ \|x\|_X\le1\}=\sup\{\|T(x)\|\ |\ x\in X,\ \|x\|=1\}$
+<br>
 
-→ 
-$B(X,Y)$はノルム空間かつ $L(X,Y)$の部分空間
+- $B(X,Y)$はノルム空間かつ $L(X,Y)$の部分空間
+<br>
 
-→
-$T\in L(X,Y)$に対して、
+- $T\in L(X,Y)$に対して、
 $T\in B(X,Y)\iff T{は一様連続}\iff T{は}\ 0\in X{で連続}$
+<br>
 
-→有界線形性は合成 $T\circ S$ で保たれる
+- 有界線形性は合成 $T\circ S$ で保たれる
 
 ---
 
 ・$\bm{C,R}$上ノルム空間 $X$に対して、
 $$L(X)=\{f:X\to X\ |\ f{は線形作用素}\}$$は合成によって$\bm{C,R}$上多元環
 
-→有界線形作用素のなす空間：
- $B(X)=\{T\in L(X)\ |\ \|T\|<\infty\}\\\ \\ 
-\|T\|=\sup\{\|T(x)\|\ |\ x\in X,\ \|x\|\le1\}=\sup\{\|T(x)\|\ |\ x\in X,\ \|x\|=1\}$
+- 有界線形作用素のなす空間：
+$$B(X)=\{T\in L(X)\ |\ \|T\|<\infty\}\\\ \\ 
+\|T\|=\sup\{\|T(x)\|\ |\ x\in X,\ \|x\|\le1\}=\sup\{\|T(x)\|\ |\ x\in X,\ \|x\|=1\}$$
 
 -  $B(X)$はノルム環かつ $L(X)$の部分空間
 
@@ -112,9 +114,7 @@ $$L(X)=\{f:X\to X\ |\ f{は線形作用素}\}$$は合成によって$\bm{C,R}$�
 
 ・ノルム空間 $X$ 、Banach空間 $Y$ に対して、 $B(X,Y)$ はBanach空間
 
-・$\bm{C,R}$上ノルム空間 $X$ の双対空間：$X^*=B(X,\bm{C,R})$
-
-→これはBanach空間
+・$\bm{C,R}$上ノルム空間 $X$ の双対空間：$$X^*=B(X,\bm{C,R})$$はBanach空間
 
 ---
 
@@ -151,6 +151,7 @@ $$\|T\|=\|T^*\|,\quad (Tu,v)_{2}=(u,T^*v)_1$$であって$T^{*}\in B(\mathcal{H_
     ・u,vは同じ元
 
 - Hilbert空間$\mathcal{H_1,H_2}$、$T\in B(\mathcal{H_1,H_2})$ に対して、$$\Phi(u,v)=(Tu,v)_2$$は $\|\Phi\|=\|T\|$ を満たす有界準双線形汎関数
+<br>
 
 - Hilbert空間$\mathcal{H_1,H_2}$、有界準双線形汎関数 $\Phi:\mathcal{H_1\times H_2}\to\bm{C,R}$ に対して、 
 $$\Phi(u,v)=(u,T^* v),\quad \|\Phi\|=\|T^*\|$$を満たす $T^*\in B(\mathcal{H_2,H_1})$ がただ一つ存在する
@@ -230,8 +231,8 @@ $$L(X,\mathfrak{M},\mu)$$
 
 ##### $L^p$関数の可測単関数近似
 
-・測度空間 $(X,\mathfrak{M},\mu),\quad p\in[1,\infty]$、$f\in\mathcal{L}(X,\mathfrak{M},\mu) $ とする。
-このとき、$$|s_n(x)|<|f(x)|\quad(\forall x,\forall n),\quad\lim_{n\to\infty}\|f-s_n\|_{L^p}<\epsilon$$を満たす可測単関数列 $s_n$ が存在する 
+・測度空間 $(X,\mathfrak{M},\mu),\quad p\in[1,\infty]$、$f\in\mathcal{L}^p(X,\mathfrak{M},\mu) $ とする。
+このとき、$$|s_n(x)|<|f(x)|\quad(\forall x,\forall n),\quad\lim_{n\to\infty}\|f-s_n\|_{L^p}=0$$を満たす可測単関数列 $s_n$ が存在する 
 
 - 可測空間 $(X,\mathfrak{M})$、有界な可測関数 $f:X\to\bm{C}$ とする。
 このとき、$f$ に一様収束する可測単関数列 $s_n$ が存在する
@@ -266,6 +267,30 @@ $$(f,g)=\int \overline{f}gd\mu$$は内積
 
 ## $l^p$空間
 
+##### 数え上げ測度と $l^p$ 空間
+
+・空でない集合 $X$ 、数え上げ測度 $\mu:2^X\to[0,\infty]$ に対して、
+$$l^p(X)=L^p(X)=\mathcal{L}^p(X)\quad(p\in[0,\infty])$$
+
+- $$\|(u_x)_{x\in X}\|_{L^p}=\left(\sum_{x\in X}|u_x|^p\right)^{\frac{1}{p}}\quad(p\in[1,\infty))$$
+
+        ・これらは非負値可測関数
+
+- $$\|(u_x)_{x\in X}\|_{L^p}=\sup_{x\in X}|u_x|$$
+
+        ・零集合が空だから、本質的上限とか持ち出さなくてよい
+    
+---
+
+・空でない集合 $X$ 、数え上げ測度 $\mu:2^X\to[0,\infty]$、$(u_x)_{x\in X}\in l^1(X)$  に対して、
+$$\int ud\mu=\sum_{x\in X}u_x$$
+
+- 空でない集合 $X$ 、数え上げ測度 $\mu:2^X\to[0,\infty]$ とする。
+このとき、可測単関数の台は有限集合。
+<br>
+
+- 空でない集合 $X$ 、$p\in[1,\infty)$、$f\in l^p(X)$  とする。
+このとき、$$|s_n(x)|<|f(x)|\quad(\forall x,\forall n),\quad\lim_{n\to\infty}\|f-s_n\|_{l^p}=0$$を満たす可測単関数列 $s_n$ が存在する 。
 
 
 ---

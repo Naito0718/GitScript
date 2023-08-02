@@ -34,8 +34,17 @@
         - [第二可算性とRadon測度](#第二可算性とradon測度)
 - [六章](#六章)
   - [Lebesgue測度](#lebesgue測度)
+        - [Lebesgue測度](#lebesgue測度-1)
+        - [線形変換](#線形変換)
+        - [極大関数と不等式](#極大関数と不等式)
+        - [Lebesgueの微分定理](#lebesgueの微分定理)
+        - [変数変換](#変数変換)
 - [七章](#七章)
   - [Bochner積分](#bochner積分)
+        - [Buchner可測関数](#buchner可測関数)
+        - [Bochner可測関数の単関数近似](#bochner可測関数の単関数近似)
+        - [Banach空間値関数](#banach空間値関数)
+        - [Bochner積分](#bochner積分-1)
 
 
 # 一章
@@ -57,9 +66,11 @@
 
 ##### 可測関数
 
-・可測関数$f^{-1}(\forall E_2)\in\mathfrak{M}_1$（↔連続関数）
+・可測関数：$f^{-1}(\forall E_2)\in\mathfrak{M}_1$
 
-→可測関数の合成は可測関数
+    ・連続関数の定義に近い
+
+- 可測関数の合成は可測関数
 
 ---
 
@@ -692,6 +703,16 @@ $\mu(B)=\sup\{\mu(K)\ |\ \forall{コンパクト集合}K\subset B\}$
 
 ## Lebesgue測度
 
+##### Lebesgue測度
+
+##### 線形変換
+
+##### 極大関数と不等式
+
+##### Lebesgueの微分定理
+
+##### 変数変換
+
 
 
 ---
@@ -701,3 +722,49 @@ $\mu(B)=\sup\{\mu(K)\ |\ \forall{コンパクト集合}K\subset B\}$
 # 七章
 
 ## Bochner積分
+
+##### Buchner可測関数
+
+・Bochner可測：可測空間 $(X,\mathfrak{M})$、$\bm{R,C}$ 上Banach空間 $B$、$f:X\to B$ とする。
+このとき、
+- $f(X)$ は可分
+- $\forall \phi\in B^*$ に対して、$\phi\circ f:X\to\bm{R,C}$ が可測
+
+であるとき、$f$ をBochner可測であるという。
+
+・Bochner可測単関数：可測空間 $(X,\mathfrak{M})$、$\bm{R,C}$ 上Banach空間 $B$、$f:X\to B$ とする。
+このとき、
+- $f(X)$ は有限集合
+- $\forall \phi\in B^*$ に対して、$\phi\circ f:X\to\bm{R,C}$ が可測
+
+であるとき、$f$ をBochner可測単関数という。
+<br>
+
+・$\bm{注意}$：ノルム空間 $B$ に対して、$A\subset B$ が可分ならば、$\mathrm{span}A$ も可分
+
+- $A,B$ が可分ならば、$A+B,\bm{F}A$ も可分
+
+---
+可測空間 $(X,\mathfrak{M})$、$\bm{R,C}$ 上Banach空間 $B$ とする。
+
+- Bochner可測関数 $f,g:X\to B$、可測関数 $h:X\to\bm{R,C}$ に対して、
+$f+g,hf$ はBochner可測関数
+<br>
+
+- 各点収束極限 $\lim_{n\to\infty}f_n(x)=f(x)$ を持つBochner可測関数列 $f_n:X\to B$ に対して、
+$f$ はBochner可測関数。
+<br>
+
+- Bochner可測関数 $f:X\to B$ に対して、
+$\|f\|$ はBochner可測関数。
+<br>
+
+- 
+
+---
+
+##### Bochner可測関数の単関数近似
+
+##### Banach空間値関数
+
+##### Bochner積分
