@@ -1,132 +1,163 @@
-- [$R^n,C^n$](#rncn)
-        - [幾何学的性質](#幾何学的性質)
-- [球面 $S^n$](#球面-sn)
-- [グラフ $Γ(f)$](#グラフ-γf)
-        - [幾何学的性質](#幾何学的性質-1)
-- [$R^2$](#r2)
-  - [平面曲線](#平面曲線)
-- [$R^3$](#r3)
-  - [空間曲線](#空間曲線)
-        - [常螺旋](#常螺旋)
-  - [空間曲面](#空間曲面)
-        - [トリチェリの回転体](#トリチェリの回転体)
+
+- [$R^n$](#rn)
+  - [基本的な性質](#基本的な性質)
+    - [位相的性質](#位相的性質)
+      - [開集合](#開集合)
+    - [ベクトル空間的性質](#ベクトル空間的性質)
+    - [位相幾何的性質](#位相幾何的性質)
+    - [微分幾何的性質](#微分幾何的性質)
+    - [Lebesgue測度](#lebesgue測度)
+    - [線形変換](#線形変換)
+    - [極大関数と不等式](#極大関数と不等式)
+    - [Lebesgueの微分定理](#lebesgueの微分定理)
+    - [変数変換](#変数変換)
+      - [変数変換公式](#変数変換公式)
+- [$R^n$ 内の多様体](#rn-内の多様体)
 
 
 
+# $R^n$
 
-# $R^n,C^n$
+## 基本的な性質
 
- ##### 幾何学的性質
+### 位相的性質
 
- ・局所コンパクトHausdorff空間。
-
- ・$C^*$-環。
-
- - ノルム：$\|x\|=\sqrt{\sum |x_i|^2}$
-
- ・弧状連結
-
- ・ $n$ 次元 $C^{\infty}$ 多様体
-
- - アトラス：$\{(\bm{R}^n,1)\}$
+・局所コンパクトHausdorff空間。
 
 ---
 
-# 球面 $S^n$
+#### 開集合
 
-$$S^n=\{(x_1,...,x_n)\in\bm{R}^n\ |\ \sum x_i^2=1\}$$
-
-##### 幾何学的性質
-
-・$n$ 次元多様体であって、
-$C^{\infty}$ アトラス：$$U_{\pm i}=\{(x_1,...,x_n)\in S^n\ |\ \pm x_i>0\},\\\ \\\phi_{\pm i}(x_1,...,x_n)=(x_1,...,x_{i-1},x_{i+1},...,x_n)\ (i=1,...,n)$$で与えられる。
-
-- $S^n$ は弧状連結。
-
----
----
----
-
-# グラフ $Γ(f)$
- $$\Gamma(f)=\{(x,f(x))\in U\times\bm{R}^n\}$$
- ##### 幾何学的性質
-
- ・開集合 $U\subset\bm{R}^n$。 $C^{\infty}$ 写像 $f:U\to\bm{R}^m$ とする。
- このとき、グラフ $\Gamma(f)$ は $C^{\infty}$ 多様体
-
- - アトラス：$$\{\Gamma(f),\phi\}\\\ \\
- \phi:\Gamma(f)\to U,\ \phi(x,f(x))=x$$
-
----
----
----
-
-# $n$次元トーラス $S^1×...×S^1$
-
- ・$n$ 次元 $C^{\infty}$ 積多様体
-
-    ・一応R^{n+1}に埋め込まれるっぽい
+・任意の開集合 $U$ は、左半開立方体の非交叉列 $I_n$ の合併で表される。：
+$$U=\bigcup_n I_n$$
 
 ---
 
+### ベクトル空間的性質
+
+・$C^*$-環。
+
+- ノルム：$\|x\|=\sqrt{\sum |x_i|^2}$
+
+### 位相幾何的性質
+
+・可縮空間：$\Psi(x,t)=x+t(x_0-x)$
+よって、弧状連結かつ単連結。
 
 
 ---
 
-# $R^2$
+### 微分幾何的性質
 
-## 平面曲線
-
-・曲率 $\kappa(s)=|\gamma''(s)|$
-
-曲率$\kappa(s)$が与えられたとき、$\theta(s)=\int_{s_0}^s\kappa(s') ds'$、$\gamma(s)=\int_{s_0}^sds'(\cos\theta(s'),\sin\theta(s'))$とすれば、これは与えられた曲率を持つ曲線
-
-
-・回転数
+・ $n$ 次元 $C^{\infty}$ 多様体：
+$$\{(\bm{R}^n,1)\}\quad(\text{アトラス})$$
 
 ---
 
-# $R^3$
+### Lebesgue測度
 
-## 空間曲線
+・$\bm{R}$ 上のLebesgue測度 $m$ に対して、
+$$m_n:\mathfrak{B}_{\bm{R}^n}\to[0,\infty]\\\ \\
+m_n=\otimes^nm$$はRadon測度。
+よって、この測度 $m_n$ を $\bm{R}^n$ 上のLebesgue測度という。
 
-・曲率$\kappa=|(\dot p\times\ddot p)|/|\dot p|^3$、捩率$\tau$
+- $\bm{R}^n$上のLebesgue測度 $m_N$ に対して、$$m_n([a_1,b_1]\times...\times[a_n,b_n])=(b_1-a_1)...(b_n-a_n)$$
 
-    ・Frenet-Serretの公式
-    ・曲率κと捩率τ等しい⇔回転と平行移動で重なる
-    ・曲率κ非負ならば、捩率τ=0⇔曲線は平面に含まれる
-    ・任意の関数τ(s)、非負関数κ(s)が与えられたとき、e_1,e_2,e_3の初期値が与えられればκ、τを曲率、捩率とする曲線が一意的に存在する
+      ・通常の意味での体積。
 
-・回転数
-
-・パラメータ表示$p(s)$
-
-    ・κ=(p'')^{1/2}, τ=det(p',p'',p''')/κ^2
-
-##### 常螺旋
-$$p(t)=(a\cos t,a\sin t,ht)$$
-・弧長：$s(t)=(a^2+h^2)^{\frac{1}{2}}t$
-・曲率：$\kappa=\frac{a}{a^2+h^2}$
-・捩率：$\tau=\frac{h}{a^2+h^2}$
+- $\bm{R}^n$ 上のBorel測度 $\mu:\mathfrak{B}_{\bm{R}^n}\to[0,\infty]$ に対して、
+$$\mu\text{ がRadon測度}\iff\mu\text{ は任意の直方体に対して通常の体積を与える}$$
 
 ---
 
-## 空間曲面
+・閉直方体 $I\subset\bm{R}^n$、連続関数 $f:I\to \bm{C}$、Lebesgue測度 $m_n:\mathfrak{B}_{\bm{R}^n}\to[0,\infty]$ とする。
+このとき、
+$$\int_Ifdm=\int_I f(x)dx\quad(\text{右辺はRiemann積分})$$
 
-##### 無限円筒 $S^1×R$
-
- ・$2$ 次元 $C^{\infty}$ 積多様体
-
----
-
-
-##### トリチェリの回転体
-$$p(t)=(x,y,\frac{1}{\sqrt{x^2+y^2}})\quad(x^2+y^2\le1)$$
-
-→$z\ge1$にのみ存在する、$z$軸回転対称な形
+    ・以降、ルベーグ積分とリーマン積分を区別しない。
 
 ---
 
-・体積：$V=\int_1^{\infty}\pi x^2dy=\pi$
+### 線形変換
 
-→一方、断面積$S_{slash}=\int_{\to0}^1\frac{1}{x}=\infty$
+・$$B\mapsto m_n(B+y)$$は $\bm{R}^n$ 上のRadon測度で、
+$$m_n(B+y)=m_n(B)\quad(\forall B\in\mathfrak{B}_{\bm{R}^n},\forall y\in\bm{R}^n)$$
+
+    ・左辺自体を新たなLebesgue測度として定める。
+
+- $A\in GL(n,\bm{R})$、$B\in \mathfrak{B}_{\bm{R}^n}$ とする。
+このとき、
+$$B\mapsto m_n(A(B)),\quad B\mapsto|\det A\ |m_n(B)$$はともに $\bm{R}^n$ 上のRadon測度であって、
+$$m_n(A(B))=|\det A\ |m_n(B)$$
+
+---
+
+### 極大関数と不等式
+
+<dl><dt>
+
+・複素数値Borel測度 $\nu:\mathfrak{B}_{\bm{R}^n}\to\bm{C}$ とする。
+このとき、Hardy-Littlewoodの極大関数：
+$$M\nu:\bm{R}^n\to [0,\infty]\\\ \\
+M\nu(x)=\sup_{r>0}\frac{|\nu|(B(x,r))}{m_n(B(x,r))}$$
+
+</dt><dd>
+
+- 複素数値測度 $\nu:\mathcal{B}_{\bm{R}^n}\to\bm{C}$、$\alpha>0$ とする。
+このとき、$$(\alpha<M\nu)\subset \bm{R}^n$$は開集合。
+よって、
+$$M\nu:\bm{R}^n\to[0,\infty]$$ はBorel関数。
+
+      ・∞取りうるし連続とは限らない。
+
+- 複素数値測度 $\nu:\mathcal{B}_{\bm{R}^n}\to\bm{C}$、$\alpha>0$ とする。
+このとき、
+$$m_n((\alpha<M\nu))\le\frac{3^n}{\alpha}\|\nu\|$$
+
+      ・||ν||=|ν|(X)、ノルムのこと。
+
+- $f\in\mathcal{L}^1(\bm{R}^n)$ とする。
+このとき、
+$$Mf(x)=Mm_{n,f}=\sup_{r>0}\frac{1}{m_n(B(x,r))}\int_{B(x,r)}|f(y)|dy$$
+
+      ・Hardy-Littlewoodの不等式
+
+</dd></dl>
+
+---
+
+### Lebesgueの微分定理
+
+<dl><dt>
+
+・$f\in\mathcal{L}^1(\bm{R}^n)$、$x\in\bm{R}^n$ とする。
+このとき、$f$ のLebesgue点 $x$：
+$$\lim_{r\to +0}\frac{1}{m_n(B(x,r))}\int_{B(x,r)}|f(y)-f(x)|dy$$
+
+</dt><dd>
+
+- $f\in\mathcal{L}^1(\bm{R}^n)$ とする。
+このとき、ほとんどすべての $x\in\bm{R}^n$ がLebesgue点。
+<br>
+
+- $f\in\mathcal{L}^1(\bm{R}^n)$ とする。
+このとき、$x\in\bm{R}^n$ で $f$ が連続ならば、$x$ はLebesgue点。
+<br>
+
+- $f\in\mathcal{L}^1(\bm{R}^n)$ とする。
+このとき、ほとんどすべての $x\in \bm{R}^n$ で
+$$\lim_{r\to +0}\frac{1}{m_n(B(x,r))}\int_{B(x,r)}f(y)dy=f(x)$$
+
+</dd></dl>
+
+---
+
+### 変数変換
+
+---
+
+#### 変数変換公式
+
+---
+
+# $R^n$ 内の多様体

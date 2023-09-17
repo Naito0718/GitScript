@@ -1,4 +1,5 @@
 - [一章：群の性質](#一章群の性質)
+  - [集合の演算](#集合の演算)
 - [二章：準同型写像](#二章準同型写像)
         - [準同型写像の性質](#準同型写像の性質)
         - [部分群と準同型写像](#部分群と準同型写像)
@@ -9,27 +10,36 @@
 - [三章：元の位数](#三章元の位数)
         - [準同型写像と元の位数](#準同型写像と元の位数)
 - [四章：群作用](#四章群作用)
-        - [基本的な性質](#基本的な性質)
-        - [種々の空間への作用](#種々の空間への作用)
+  - [基本的な性質](#基本的な性質)
+  - [種々の空間への作用](#種々の空間への作用)
 - [五章：共役](#五章共役)
 
 
 # 一章：群の性質
 
+## 集合の演算
+
 ・$$gAg^{-1}\subset A\ (\forall g)\iff gAg^{-1}=A\ (\forall g)\iff gA=Ag\ (\forall g)\\\ \\
 $$
-
-- $$BAB^{-1}\subset A\Rightarrow BA\subset AB\ {かつ}\ AB^{-1}\subset B^{-1}A$$
+- $$BAB^{-1}\subset A\Rightarrow BA\subset AB\ {かつ}\ AB^{-1}\subset B^{-1}A\\\ \\$$
 
 - $g\in G$ に対して、
-$$A=gBg^{-1}\iff B=g^{-1}Ag$$
+$$A=gBg^{-1}\iff B=g^{-1}Ag\\\ \\$$
 
-- $$(AB)^{-1}=B^{-1}A^{-1}$$
+- $$(AB)^{-1}=B^{-1}A^{-1}\\\ \\$$
+
+- $$gA\subset B\iff A\subset g^{-1}B$$
+        
+      ・gは右からかけても同様に成り立つ。
+
+- $$g\bigcup U_{\lambda}=\bigcup gU_{\lambda},\quad g\bigcap_{\lambda}U_{\lambda}=\bigcap gU_{\lambda}$$
+
 
 ---
 
 ・部分集合 $H\subset G$ に対して、
-$H$ は部分群$\iff H^{-1}\subset H,\ HH\subset H\iff x,y\in H {ならば} x^{-1}y\in H\iff H^{-1}H\subset H$
+$H$ は部分群$\iff H^{-1}\subset H,\ HH\subset H\\\ \\
+\iff x,y\in H {ならば} x^{-1}y\in H\iff H^{-1}H\subset H$
 
         ・包含は等号でもよい。
 
@@ -44,6 +54,12 @@ $H$ は部分群$\iff H^{-1}\subset H,\ HH\subset H\iff x,y\in H {ならば} x^{
 
 - $N_1,N_2\subset G$ を共に正規部分群とする。
 このとき、$N_1\cap N_2$ は $G$ の正規部分群。
+
+---
+
+・群 $G_1,G_2$、準同型写像 $G_1\to G_2$、$x\in G_1,A\sub G_1$ とする。
+このとき、
+$$f(x)f(A)=f(xA)$$
 
 ---
 ---
@@ -171,33 +187,90 @@ $\phi(g)$ の位数は $g$ の位数に等しい。
 
 # 四章：群作用
 
-##### 基本的な性質
+## 基本的な性質
+
+<dl><dt>
 
 ・群 $G$、集合 $X$ とする。
 このとき、作用：
 $$gx\in X\\\ \\
 g(hx)=(gh)x\\\ \\
-ex=x$$
-
----
-
-・群 $G$ が集合 $X$ に作用し、$x\in M$とする。
-このとき、等方群：$$G_x=\{g\in G\ |\ gx=x\}$$は $G$ の部分群。
+ex=x\\\ \\$$
 
 - 群 $G$ が集合 $X$ に作用する時、
-推移的な作用：$$\forall x,y\in X\text{ に対して、}\exist g\in G\text{ であって、}\\\ \\
-gx=y$$
+効果的、自由な作用：
+$$T_g=id_X\iff g=e\\\ \\
+\exist x\in X\text{ であって、}gx=x\iff g=e$$
+
+      ・自由な作用のときは、T_e以外の作用は不動点を持たない。
+<br>
+
+</dt><dd>
+
+- $x\in X$、作用 $\Psi:G\times X\to X$、制限 $\Psi_x(g)=gx$ とする。
+このとき、等方群：$$G_x=\{g\in G\ |\ gx=x\}=\Psi_x^{-1}(\{x\})$$は $G$ の部分群。
+
+<br>
+
+- $T_g:X\to X,\quad T_g(x)=gx$ と定めると、
+$$T_e(x)=x\\\ \\
+T_g(T_h(x))=(gh)x\\\ \\
+(T_g)^{-1}=T_{g^{-1}}$$ を満たす。特に、$T_g$ は全単射。
+<br>
+
+- $G(x)=\{gx\ |\ g\in G\}\sub X$ と定めると、
+$$G(x)\cap G(y)\neq\phi\iff G(x)=G(y)\\\ \\
+X=\bigcup_{x\in X} G(x)$$が成り立つ。特に、
+$$x\sim y\iff \exist g\in G\text{ であって }y=gx$$で同値関係を定めると、$G(x)$ は $x$ の同値類。ここで、$G(x)$ を軌道といい、軌道空間 $X/G$ とする。
+<br>
+
+- 等方群 $H_x$ に対して、
+$$\text{作用が効果的}\iff\bigcap_{x\in X}H_x=\{e\}\\\ \\$$
+
+
+</dd></dl>
 
 ---
 
-##### 種々の空間への作用
+<dl><dt>
 
-・群 $G$、環 $R$
+・ 群 $G$ が集合 $X$ に作用する時、
+推移的な作用：$$\forall x,y\in X\text{ に対して、}\exist g\in G\text{ であって、}\\
+gx=y\\\ \\$$
+
+</dt><dd>
+
+- 軌道 $G(x)$ に対して、
+$$\text{作用が推移的}\iff X\text{ の軌道がただ一つのみからなる}\\\ \\$$
+
+- 
+$$P_x:G\to X\\\ \\
+P_x(g)=gx$$は全射。
+
+
+
+</dd></dl>
 
 ---
 
-・群 $G$、環 $R$
+## 種々の空間への作用
+
+・群 $G$、環 $R$ 
+
+---
+
+・群 $G$ が $K$-加群 $V$ に集合として作用するとする。
+このとき、$K$-加群 $V$ への作用：
+$$g(v_1+v_2)=gv_1+gv_2,\quad g(v\alpha)=(gv)\alpha$$
+また、$V$ を $G-K$ 加群、$G$ の $K$ 上表現加群という。
+
+    ・有限次元なら表現
+
+- $$V^G=\{v\in V\ |\ gv=v\ (\forall g)\}$$は部分 $K$-加群。
 
 ---
 
 # 五章：共役
+
+---
+

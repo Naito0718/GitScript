@@ -9,14 +9,15 @@
         - [有限次元ノルム空間 $X$](#有限次元ノルム空間-x)
     - [Hilbert空間上の有界線形作用素](#hilbert空間上の有界線形作用素)
         - [共役作用素](#共役作用素)
-- [三章](#三章)
-  - [$L^p$空間](#lp空間)
-        - [Holderの不等式、Minkowskiの不等式](#holderの不等式minkowskiの不等式)
-        - [$L^p$空間](#lp空間-1)
-        - [$L^p$関数の可測単関数近似](#lp関数の可測単関数近似)
+- [三章： $L^p$ 空間](#三章-lp-空間)
+  - [一般の測度空間に対する $L^p$ 空間](#一般の測度空間に対する-lp-空間)
+    - [Holderの不等式、Minkowskiの不等式](#holderの不等式minkowskiの不等式)
+    - [$L^p$空間](#lp空間)
+    - [$L^p$関数の可測単関数近似](#lp関数の可測単関数近似)
         - [$L^p-L^q$ ペアリング](#lp-lq-ペアリング)
+  - [局所コンパクトHausdorff空間のRadon測度と $L^p$ 空間](#局所コンパクトhausdorff空間のradon測度と-lp-空間)
 - [四章](#四章)
-  - [$l^p$空間](#lp空間-2)
+  - [$l^p$空間](#lp空間-1)
         - [数え上げ測度と $l^p$ 空間](#数え上げ測度と-lp-空間)
 
 
@@ -169,11 +170,11 @@ $$\Phi(u,v)=(u,T^* v),\quad \|\Phi\|=\|T^*\|$$を満たす $T^*\in B(\mathcal{H_
 ---
 ---
 
-# 三章
+# 三章： $L^p$ 空間
 
- ## $L^p$空間
+## 一般の測度空間に対する $L^p$ 空間
 
- ##### Holderの不等式、Minkowskiの不等式
+### Holderの不等式、Minkowskiの不等式
 
  ・共役指数：$\frac{1}{p}+\frac{1}{q}=1\quad (p,q\in(1,\infty))$
 
@@ -200,7 +201,7 @@ $$\Phi(u,v)=(u,T^* v),\quad \|\Phi\|=\|T^*\|$$を満たす $T^*\in B(\mathcal{H_
 
  ---
 
- ##### $L^p$空間
+### $L^p$空間
 
  ・複素数値可測関数のなすベクトル空間　$\mathcal{L}(X,\mathfrak{M},\mu)$　から構成される同値類の集合 ：
  $$L(X,\mathfrak{M},\mu)$$
@@ -231,45 +232,56 @@ $$\Phi(u,v)=(u,T^* v),\quad \|\Phi\|=\|T^*\|$$を満たす $T^*\in B(\mathcal{H_
   
  ---
 
- ##### $L^p$関数の可測単関数近似
+### $L^p$関数の可測単関数近似
 
- ・測度空間 $(X,\mathfrak{M},\mu),\quad p\in[1,\infty]$、$f\in\mathcal{L}^p(X,\mathfrak{M},\mu) $ とする。
- このとき、$$|s_n(x)|<|f(x)|\quad(\forall x,\forall n),\quad\lim_{n\to\infty}\|f-s_n\|_{L^p}=0$$を満たす可測単関数列 $s_n$ が存在する 
+・測度空間 $(X,\mathfrak{M},\mu),\quad p\in[1,\infty]$、$f\in\mathcal{L}^p(X,\mathfrak{M},\mu) $ とする。
+このとき、$$|s_n(x)|<|f(x)|\quad(\forall x,\forall n),\quad\lim_{n\to\infty}\|f-s_n\|_{L^p}=0$$を満たす可測単関数列 $s_n$ が存在する。
 
- - 可測空間 $(X,\mathfrak{M})$、有界な可測関数 $f:X\to\bm{C}$ とする。
- このとき、$f$ に一様収束する可測単関数列 $s_n$ が存在する
+    ・このとき、s_n は L^p空間の元。
+
+- 可測空間 $(X,\mathfrak{M})$、有界な可測関数 $f:X\to\bm{C}$ とする。
+このとき、$f$ に一様収束する可測単関数列 $s_n$ が存在する
 
  ---
 
- ##### $L^p-L^q$ ペアリング
+##### $L^p-L^q$ ペアリング
 
- ・測度空間 $(X,\mathfrak{M},\mu)$、共役指数 $p,q\in[1,\infty]$、$f\in L^p,\ g\in L^q$ とする。
- このとき、$$\|fg\|_{L^1}\le \|f\|_{L^p}\|g\|_{L^q}$$
+・測度空間 $(X,\mathfrak{M},\mu)$、共役指数 $p,q\in[1,\infty]$、$f\in L^p,\ g\in L^q$ とする。
+このとき、$$\|fg\|_{L^1}\le \|f\|_{L^p}\|g\|_{L^q}$$
 
     ・(1,∞)でもよい
 
- - 測度空間 $(X,\mathfrak{M},\mu)$、共役指数 $p,q\in[1,\infty]$ とする。
+- 測度空間 $(X,\mathfrak{M},\mu)$、共役指数 $p,q\in[1,\infty]$ とする。
  このとき、$$\Psi:L^p\times L^q\to\bm{C},\quad\Psi(f,g)=\int fgd\mu$$は有界双線形汎関数
 
        ・ノルムは1以下
        ・手前で共役取ったら準双線形
 
- <br>
+<br>
 
- - 測度空間 $(X,\mathfrak{M},\mu)$ とする。
+- 測度空間 $(X,\mathfrak{M},\mu)$ とする。
  このとき、$f,g\in L^2(X)$に対して、
  $$(f,g)=\int \overline{f}gd\mu$$は内積
 
- ---
- ---
- ---
+---
+
+## 局所コンパクトHausdorff空間のRadon測度と $L^p$ 空間
+
+・局所コンパクトHausdorff空間 $X$、Radon測度 $\mu$、$p\in[1,\infty)$、$f\in\mathcal{L}^p(X,\mu)$ とする。
+このとき、
+$$\exist f_n\subset C_c(X)\text{ であって、}\\\ \\
+\lim_{n\to\infty}\|f-f_n\|_{p}=0$$
+
+---
+---
+---
 
 
 # 四章
 
- ## $l^p$空間
+## $l^p$空間
 
- ##### 数え上げ測度と $l^p$ 空間
+##### 数え上げ測度と $l^p$ 空間
 
  ・空でない集合 $X$ 、数え上げ測度 $\mu:2^X\to[0,\infty]$ に対して、
  $$l^p(X)=L^p(X)=\mathcal{L}^p(X)\quad(p\in[0,\infty])$$
