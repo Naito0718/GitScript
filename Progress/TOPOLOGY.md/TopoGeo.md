@@ -203,7 +203,8 @@ $$\phi_*:\pi(X,x_0)\to\pi(Y,\phi(x_0))$$は群同型写像。
 
 <dl><dt>
 
-・位相空間 $(A,B)$、連続な全射：$p:A\to B$、開集合 $U\subset X$ とする。
+・位相空間 $(A,B)$、連続な全射：$p:A\to B$、開集合 $U\subset B
+$ とする。
 このとき、$(A,B,p)$ が $U$ 上で自明：
 $$\exist\text{ 位相空間 }F_U,\ \exist\text{ 同相写像 }\phi_U:U\times F_U\to p^{-1}(U)\text{ であって、}\\\ \\
 p\circ\phi_U=p_U\quad(p_U:U\times F_U\to U,\ p(u,f)=u)$$
@@ -212,14 +213,19 @@ p\circ\phi_U=p_U\quad(p_U:U\times F_U\to U,\ p(u,f)=u)$$
 
 ・ファイバー空間 $(A,B,p,F)$：
 
-$$A,B\text{ は位相空間}\\\ \\ p:A\to B\text{ は連続な全射}\\\ \\ \exist\text{ 開被覆 }X=\bigcup U_{\lambda}\text{ であって、}U_{\lambda}\text{ 上で自明化が与えられていて、}F_{\lambda}\cong F\ \ (\text{同相})$$
+$$A,B\text{ は位相空間}\\\ \\
+p:A\to B\text{ は連続な全射}\\\ \\ 
+\exist\text{ 開被覆 }B=\bigcup U_{\lambda}\text{ であって、}U_{\lambda}\text{ 上で自明化が与えられていて、}\\
+F_{\lambda}\cong F\ \ (\text{同相})$$
 
     ・A:全空間、B:底空間、p:射影、F：ファイバー。
     ・自明化写像の定義域は、ファイバーFで置き換えてよい。
 
 </dt><dd>
 
-- $p^{-1}(x)\cong F\ (\text{同相})$
+- $\forall x\in B$ に対して、
+$$p^{-1}(x)\cong F\ \ (\text{同相})\\\ \\
+\phi_U:\{x\}\times F\to p^{-1}(x)$$
 
 - ファイバー空間の射影は開写像。
 

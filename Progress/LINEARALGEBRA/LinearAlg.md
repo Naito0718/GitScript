@@ -30,24 +30,6 @@
       - [生成される $\\bm{Z}\_2$ 次数付き多元環](#生成される-bmz_2-次数付き多元環)
   - [有限次元](#有限次元-1)
     - [$R$ などに対する性質](#r-などに対する性質)
-- [内積 $K$- 右加群](#内積-k--右加群)
-  - [定義](#定義-1)
-    - [長さ $||x||$](#長さ-x)
-  - [内積 $K$-右準同型](#内積-k-右準同型)
-  - [有限次元](#有限次元-2)
-    - [正規直交基底](#正規直交基底)
-    - [基底の変換](#基底の変換)
-    - [共役と双対](#共役と双対)
-- [$K$-多元環](#k-多元環)
-- [Banach単位的ノルム環](#banach単位的ノルム環)
-  - [収束ベキ級数](#収束ベキ級数)
-    - [正規収束](#正規収束)
-    - [収束半径](#収束半径)
-    - [演算と収束](#演算と収束)
-      - [和と積](#和と積)
-      - [合成](#合成)
-      - [線形写像とベキ級数](#線形写像とベキ級数)
-    - [収束する指数写像](#収束する指数写像)
 
 
 # $R$ 上の斜体 $K$
@@ -120,16 +102,24 @@ x=\sum_i (v_i\otimes w_i)\\\ \\$$
 このとき、$$V_1\otimes W_1\cong V_2\otimes W_2\ (K\text{-右同型})$$ であり、$V_2\otimes W_2$ は $V_1,W_1$ のテンソル積。
 <br>
 
-- - $$V\otimes W=F(V\times W)/I(V\times W)\\\ \\
+- $K$-右加群 $V,W$、テンソル積とそれに同型な $K$-右加群 $V\otimes W\cong X\ \ (f\text{ で }K\text{-右同型})$ とする。
+このとき、$(X,f\circ\tau)$ は $V,W$ のテンソル積。
+
+      ・一意性も確認！
+<br>
+
+---
+
+  - - $$V\otimes W=F(V\times W)/I(V\times W)\\\ \\
 I(V\times W)=\lang\{(u+u',w)-(u,w)-(u',w),\ (u,w+w')-(u,w)-(u,w'),\\\ \\ (u\alpha,w)-(u,w)\alpha,\ (u,w\alpha)-(u,w)\alpha\}\rang\\\ \\
 \tau((u,w))=[(u,w)]=u\otimes w\\\ \\
 \psi'(\sum(u,w)\alpha_{u,w})=\sum\phi((u,w))\alpha_{u,w},\quad\psi'(I(V\times W))=0\ \ (\psi\text{ は誘導されるやつ})$$と定めると、$(V\otimes W,\tau)$ は普遍環。
 
-        ・F(V×W)は形式的有限和全体の集合。
-        ・I(V×W)のとこの演算は形式和。  
-        ・前の半加群のときと同じ。
-        ・3個以上でテンソル積を作るときは、I(V×W)の要素を増すだけでよい。
-        ・このΨ'はwell-defined
+          ・F(V×W)は形式的有限和全体の集合。
+          ・I(V×W)のとこの演算は形式和。  
+          ・前の半加群のときと同じ。
+          ・3個以上でテンソル積を作るときは、I(V×W)の要素を増すだけでよい。
+          ・このΨ'はwell-defined
 
 </dd></dl>
 
@@ -150,6 +140,8 @@ $$\exist u\in A,v\in B\text{ であって、}x=u\otimes 1+1\otimes v$$
 ---
 
 ### テンソル $K$-多元環
+
+<dl><dt>
 
 ・可換体 $K$-加群 $V$ とする。
 このとき、
@@ -240,6 +232,8 @@ $$A\hat{\otimes}B\cong A\hat{\otimes} C\ \ (\text{次数付き $K$-多元環同�
 ---
 
 ### 外積 $K$-多元環
+
+<dl><dt>
 
     ・積：ab=a∧b、τ(u)=uと書く。
 
@@ -423,6 +417,8 @@ $$(V\otimes W)^*\cong V^*\otimes W^*\\
 
     ・テンソルと双対の全射では、ηは基底を1に移すやつで、ξはgη^{-1}
 
+---
+
 ##### 双対と外積
 
 ・$$\Lambda^r(V^*)\cong(\Lambda^r(V))^*\ \ (K\text{-同型})\\\ \\
@@ -431,6 +427,12 @@ f(\xi_1\wedge...\wedge\xi_r)(u_1\wedge...\wedge u_r)=\det(\xi_j(u_i))$$
     ・写像は基底を基底に移す。
     ・多元環同型ではない。
     ・多様体とかで大事！
+
+- 上記の写像 $f$ について、$\xi\in\Lambda^r(V^{\vee}),\ \eta\in\Lambda^{l}(V^{\vee})$ とすると、
+$$f(\xi\wedge\eta)(v_1\wedge...\wedge v_{r+l})\\\ \\
+=\sum_{\substack{1\le\sigma(1)<...<\sigma(k)\le k+l\\\ \\ 1\le\sigma(k+1)<...<\sigma(k+l)\le k+l}} (\mathrm{sgn}(\sigma))f(v_{\sigma(1)},...,v_{\sigma(k)})g(v_{\sigma(k+1)},...,v_{\sigma(k+l)})$$
+
+      ・基底だけ代入してみればよい。
 
 ---
 
@@ -461,6 +463,8 @@ $$\lang u,v\rang=\lang v,u\rang\\\ \\
 ---
 
 ## Clifford多元環
+
+<dl><dt>
 
 ・可換体 $K$-加群 $V$ とする。
 このとき、
@@ -586,251 +590,5 @@ $$\#\{1,u_iu_j\ \ (i<j),\ ...,\ u_1...u_n\}=2^n$$ は基底。
 ---
 ---
 
-# 内積 $K$- 右加群
 
-    ・K=R,C,H とする。
 
-## 定義
-
-・$K$-右加群 $V$ に対して、
-内積：
-$$(x,y)=\overline{(y,x)}\\\ \\
-(x,y_1\alpha+y_2\beta)=(x,y_1)\alpha+(x,y_2)\beta\\\ \\
-(x,x)\ge0,\quad(x,x)=0\iff x=0$$
-
-    ・内積を持つものを内積K-右加群という。
-    ・長さ：||x||=√(x,x)
-
-- 内積 $K$-右加群 $V$ に対して、
-$$(x_1+x_2,y)=(x_1,y)+(x_2,y)\\\ \\
-(x\lambda,y)=\overline{\lambda}(x,y)\\\ \\
-\forall y\in V\text{ に対して }(x,y)=0\iff x=0\quad(\text{正則性})$$
-
-- 正規直交する元の組は右一次独立。
-
----
-
-### 長さ $||x||$
-
-・
-$$\|x\|\ge0,\quad\|x\|=0\iff x=0,\quad\|x\lambda\|=\|x\||\lambda|\\\ \\
-|(x,y)|\le\|x\|\|y\|\\\ \\
-\|x+y\|\le\|x\|+\|y\|$$
-
-- 距離：$\|x-y\|$ によって、$V$ は距離空間。
-
----
-
-## 内積 $K$-右準同型
-
-・内積 $K$-右加群 $V,W$、$K$-右準同型 $\alpha:V\to V$ とする。
-このとき、内積 $K$-右準同型：
-$$(\alpha(x),\alpha(y))_W=(x,y)_V$$
-
----
-
-## 有限次元
-
-### 正規直交基底
-
-<dl><dt>
-
-・有限次元内積 $K$-右加群 $V$ とする。
-
-
-</dt><dd>
-
-- $V$ は正規直交基底を持つ。
-
-- 右一次独立な元の組に対して、それらを含む正規直交基底が存在する。
-
-</dd></dl>
-
----
-
-・有限次元内積 $K$-右加群 $V,W$ とする。
-このとき、
-$$\dim V=\dim W\iff V\cong W\ \ (\text{内積 $K$-右同型 })$$
-
-
----
-
-### 基底の変換
-
-・$n$ 次元内積 $K$-右加群 $V$、正規直交基底 $e_i,f_i$ とする。
-ここで、
-$$T=(t_{ij})\in M(n,K)\\\ \\
-f_j=\sum_i e_it_{ij}$$と定めると、
-$$T\in G(n,K)$$
-
----
-
-### 共役と双対
-
-・内積有限次元 $\bm{C}$ 加群 $V$ とする。
-このとき、
-$$\overline{V}\cong V^*\\
-\psi(u)=\xi_u,\quad\xi_u(v)=(u,v)\\\ \\$$
-
-- 内積有限次元 $\bm{C}$ 加群 $V$、基底 $u_i$ とする。
-このとき、$u_i$ は $\overline{V}$ の基底。
-<br>
-
-- 内積有限次元 $\bm{C}$ 加群 $V$、正規直交基底 $u_i$ とする。
-このとき、上記の同型において、$\psi(u_i)$ は $V^*$ の双対基底：$$\psi(u_i)(u_j)=\delta_{ij}$$
-
----
----
----
-
-# $K$-多元環
-
-    ・斜体では定義されない。
-    ・環かつベクトル空間で、整合する。
-    ・K-イデアルは部分空間なるイデアル。
-
-
-
-
----
-
-# Banach単位的ノルム環
-
-    ・Banach空間かつノルム環で乗法単位元を持つ。
-    ・第一可算だから点列でよい。
-
-## 収束ベキ級数
-
-### 正規収束
-
-・Banach単位的 $\bm{C,R}$-代数 $A$、集合 $Y$、$u_i:Y\to A$ とする。
-このとき、正規収束級数：$\sum u_i(y)$：
-$$\|u_p(y)\|\le c_p,\quad\sum c_p(y)\in\bm{C,R}$$
-
-- $\sum u_i(y)$ は各点において絶対収束する。
-- $\sum u_i(y)$ は一様収束する。
-- $Y$ が位相空間かつ $u_i(y)$ が連続ならば、$\sum u_i(y)$　は連続関数。
-
----
-
-### 収束半径
-
-・$\bm{C,R}$ 係数ベキ級数 $F(x)=\sum a_ix^i$ に対して、
-収束半径 $\rho$：
-$$\rho=\sup\{r\ge0\ |\ \sum|a_i|r^i\in\bm{R}\}$$
-
-    ・ρ>0 ならば収束ベキ級数という。
-
----
-
-・Banach単位的 $\bm{C,R}$-代数 $A$、$\bm{C,R}$ 係数収束ベキ級数 $F(x)=\sum a_ix^i$、収束半径 $\rho>0$ とする。
-<br>
-
-- $$\sum a_i\xi_i\quad(\{\xi\ |\ \|\xi\|\le r<\rho,\ 0<r\}$$は正規収束する。
-<br>
-
-- $$F(\xi):\{\xi\ |\ \|\xi\|<\rho\}\to\bm{C,R}\\\ \\
-F(\xi)=\sum a_i\xi^i$$は連続関数。 
-
----
-
-・$K$ 係数形式的ベキ級数 $F(x)=\sum a_ip^i$ 、収束半径 $\rho$ とする。
-
-- $$\frac{1}{\rho}=\overline{\lim_{n\to\infty}}|a_n|^{1/n}\\\ \\
-\frac{1}{\rho}=\lim_{n\to\infty}|\frac{a_n}{a_{n+1}}|$$
-
-- $F'(x)=\sum_{n\ge1}na_nx^{n-1}$ において、収束半径は $F(x)$ と一致する。
-<br>
-
-- $F:\{z\in\bm{C,R}\ |\ |z|<\rho\}\to\bm{C,R},\quad F(z)=\sum a_nz^n$ とする。
-このとき、$F$ は微分可能で、
-$$\frac{d}{dz}F(z)=F'(z)=\sum_{n\ge1}na_nz^{n-1}$$
-
-      ・実数上でも0を含む開区間で一致すればF(x)=G(x)
-
----
-
-### 演算と収束
-
-#### 和と積
-
-<dl><dt>
-
-・ともに収束半径 $\ge\rho>0$ である $\bm{C,R}$ 係数収束ベキ級数 $F(x),G(x)$ とする。
-<br>
-
-</dt><dd>
-
-- $$A(x)=F(x)+G(x),\quad B(x)=F(x)G(x)$$とおくと、$A(x),B(x)$ の収束半径 $\ge\rho$ である。
-さらに、Banach単位的 $\bm{C,R}$-代数 $A$、$\|\xi\|<\rho$ なる $\xi\in A$ とすると、
-$$A(\xi)=F(\xi)+G(\xi),\quad B(\xi)=F(\xi)G(\xi)\\\ \\$$
-
-- Banach単位的 $\bm{C,R}$-代数 $A$、絶対収束級数 $\sum\xi_p,\ \sum\eta_p\sub A$ とする。
-このとき、$$\zeta_p=\sum_{k=0}^p \xi_k\eta_{p-k}$$と定めると、
-$\sum \zeta_p$ は絶対収束し、
-$$\sum\zeta_p=\left(\sum\xi_q\right)\left(\sum\eta_p\right)$$
-
-</dd></dl>
-
----
-
-#### 合成
-
-<dl><dt>
-
-・$\bm{C,R}$ 係数収束ベキ級数 $F(x)=\sum a_px^p\ ,G(x)=\sum b_px^p,\ \mathrm{ord}(G)\ge1$、$H=F\circ G$、収束半径 $\rho(F),\ \rho(G),\ \rho(H)$ とする。
-<br>
-
-</dt><dd>
-
-- $\exist\delta>0$ であって、$0<r<\delta$ ならば、
-$$\sum |b_p|r^p<\rho(F),\quad r<\rho(G),\quad r<\rho(H)$$したがって、$H(x)$ は収束ベキ級数。
-<br>
-
-- $0<r$ を上記の仮定を満たす実数、Banach単位的 $\bm{C,R}$-代数 $A$、$\|\xi\|<r$ なる $\xi\in A$ とすると、
-$$\|G(\xi)\|<\rho(F),\quad H(\xi)=F(G(\xi))$$
-
-
-</dd></dl>
-
-
----
-
-#### 線形写像とベキ級数
-
-・Banach単位的 $\bm{C,R}$-代数 $A$、$\bm{C,R}$ 係数収束ベキ級数 $F(x)=\sum a_ix^i$、収束半径 $\rho>0$ とする。
-また、$K$-単位的連続線形写像 $\psi:A\to A$ とする。
-
-このとき、$\alpha\in B$ に対して $F(\alpha)$ が収束するならば、
-$\psi(\alpha)$ も収束して、
-$$F(\psi(\alpha))=\psi(F(\alpha))$$
-
----
-
-### 収束する指数写像
-
-<dl><dt>
-
-・Banach単位的 $\bm{C,R}$-代数 $A$ とする。
-このとき、
-$$\exp:A\to A\\\ \\
-\exp(\alpha)=\sum\frac{1}{n!}\alpha^n$$ は連続関数。
-<br>
-
-</dt><dd>
-
-- $$\log:\{\alpha\in A\ |\ \|\alpha-1_A\|\le 1\}\to A\\\ \\
-\log(\alpha)=\sum_{n\ge1}\frac{(-1)^{n-1}}{n}(\alpha-1_A)^n$$は連続関数。
-<br>
-
-- $$U=\{\alpha\in A\ |\ \|\alpha-1_A\|<1/2\},\quad N=\log U,\\\ \\
-N_0=\{\alpha\in A\ |\ \|\alpha\|<\log 2\}$$ とする。
-このとき、$\exp$ は $N_0$ 上単射で　
-$$\log(\exp\alpha)=\alpha\ \ (\forall\alpha\in N_0)$$ であって、$N$ は$$N\sub N_0,\quad\exp N=U$$を満たす $0_A$ の開近傍。
-さらに、$U$ は $1_A$ の開近傍で、開集合 $U,N$ は $\exp,\log$ によって同相。
-
-</dd></dl>
-
-
-
----
