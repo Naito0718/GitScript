@@ -3,7 +3,7 @@
   - [一般の測度空間に対する $L^p$ 空間](#一般の測度空間に対する-lp-空間)
     - [Holderの不等式,Minkowskiの不等式](#holderの不等式minkowskiの不等式)
     - [$L^p$空間](#lp空間)
-      - [包含関係](#包含関係)
+      - [有限測度と包含関係](#有限測度と包含関係)
     - [$L^p$関数の可測単関数近似](#lp関数の可測単関数近似)
         - [$L^p-L^q$ ペアリング](#lp-lq-ペアリング)
   - [局所コンパクトHausdorff空間のRadon測度と $L^p$ 空間](#局所コンパクトhausdorff空間のradon測度と-lp-空間)
@@ -65,24 +65,25 @@
 ---
 
 ・$$L^{\infty}(X,\mathfrak{M},\mu)=\{\inf\{\alpha\in[0,\infty)\ |\ \mu((\alpha<|f|))=0\}<\infty\}\\\ \\
-{ただし、}\inf\{\sim\}{の中身が空ならば}\ \infty\ {とする}$$
+{ただし、}\inf\{\sim\}{の中身が空ならば}\ \infty\ {とする}\\\ \\$$
 
-    ・本質的上限のこと、任意の実数より大きくなる点が零集合
+- $$\mu((\|f\|_{L^{\infty}}<|f|))=0$$
+したがって、$$|f(x)|\le\|f\|_{L^{\infty}}\ (a.e.)\\\ \\$$
 
-- $\mu((\|f\|_{L^{\infty}}<|f|))=0$
+      ・積の積分とかで使える。
+<br>
+
 - $L^∞(X)$ は $\bm{C}$ 上Banach空間
   
 ---
 
-#### 包含関係
+#### 有限測度と包含関係
 
 ・$p_1<p_2<\infty$ とし、$\mu(X)<\infty$ とする。
 このとき、$L^{p_2}\sub L^{p_1}$ であって、
-$$\|f\|_{L^{p_1}}\le\mu(X)^{(p_2-p_1)/p_1p_2}\|f\|_{L^{p_2}}$$
+$$\|f\|_{L^{p_1}}\le\mu(X)^{(p_2-p_1)/p_1p_2}\|f\|_{L^{p_2}}\\\ \\$$
 
-    ・有限測度空間。
-
-・$p\in[1,\infty)$、$\mu(X)<\infty$ とする。
+- $p\in[1,\infty)$、$\mu(X)<\infty$ とする。
 このとき、$L^{\infty}\sub L^{p}$ であって、
 $$\|f\|_{L^{p}}\le\mu(X)^{1/p}\|f\|_{L^{\infty}}$$
 
@@ -123,10 +124,12 @@ $$\|f\|_{L^{p}}\le\mu(X)^{1/p}\|f\|_{L^{\infty}}$$
 
 ## 局所コンパクトHausdorff空間のRadon測度と $L^p$ 空間
 
-・局所コンパクトHausdorff空間 $X$、Radon測度 $\mu$、$p\in[1,\infty)$、$f\in\mathcal{L}^p(X,\mu)$ とする。
-このとき、
+・$X$ が局所コンパクトHausdorff空間なRadon測度空間 $(X,\mathfrak{B},\mu)$、$p\in[1,\infty)$、$f\in\mathcal{L}^p(X,\mu)$ とする。
+このとき、$C_c(X)\sub\mathcal{L}^p(X,\mu)$ が成り立ち、
 $$\exist f_n\subset C_c(X)\text{ であって、}\\\ \\
-\lim_{n\to\infty}\|f-f_n\|_{p}=0$$
+\lim_{n\to\infty}\|f-f_n\|_{p}=0\\\ \\$$
+
+    ・別にC_{c,+}でもよい。
 
 ---
 ---

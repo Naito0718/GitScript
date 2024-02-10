@@ -1,5 +1,5 @@
 
-- [$k$ 形式](#k-形式)
+- [$1$ 形式](#1-形式)
   - [余接束](#余接束)
       - [リウヴィル（ポアンカレ）形式](#リウヴィルポアンカレ形式)
   - [微分 $df$](#微分-df)
@@ -17,7 +17,7 @@
 
 
 
-# $k$ 形式
+# $1$ 形式
 
 ## 余接束
 
@@ -32,7 +32,7 @@ $$T^*M=\bigcup_{p\in M}(T_pM)^{\vee}$$
 
 - $m$ 次元 $C^{\infty}$ 多様体 $M$、$C^{\infty}$ 写像 $\omega:M\to T^*M$ とする。
 このとき、
-$$\omega\text{ は }C^{\infty}1\text{ 形式 }\iff \omega\text{ は }C^{\infty}\text{ 切断}$$
+$$\omega\text{ は }C^{\infty}1\text{ 形式 }\iff \omega\text{ は }C^{\infty}\text{ 切断}\\\ \\$$
 
       ・各点pにT^*pMの元を割り当てる。
       ・結局係数関数がC^∞かどうかを見ればよい。
@@ -42,6 +42,7 @@ $$\omega\text{ は }C^{\infty}1\text{ 形式 }\iff \omega\text{ は }C^{\infty}\
 このとき、
 $$\Omega^1(M)=\{\omega:M\to T^*M\ |\ \omega\text{ は }C^{\infty}\text{ 一形式}\}$$
 は $\bm{R}$ 上ベクトル空間。
+<br>
 
       ・下で示した各成分との関係による。
 
@@ -262,14 +263,15 @@ $$F^*(dh)=d(F^*h)\\\ \\$$
 
 ・$m$ 次元 $C^{\infty}$ 多様体 $M$ とする。
 このとき、$k\ (\le m)$ 形式 $\omega$：
-$$\text{各点 }p\in M\text{ に対して、}\omega_p(\Lambda^r(T_pM))^{\vee}\\\ \\$$
+$$\text{各点 }p\in M\text{ に対して、}\omega_p\in(\Lambda^k(T_pM))^{\vee}\\\ \\$$
 
 - $m$ 次元 $C^{\infty}$ 多様体 $M$、チャート $(U,\phi)$、$k$ 形式 $\omega$ とする。
 このとき、チャート $U$ 上において、
 $$\omega_p=\sum a_I(p)dx^I\quad(\forall p\in U)$$
 と書ける。
+<br>
 
-    ・結局同型だから、この形で展開できてる。
+      ・結局同型だから、この形で展開できてる。
 
 ---
 

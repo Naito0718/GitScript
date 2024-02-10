@@ -125,7 +125,7 @@ $$\psi\text{ はファイバー写像}\iff p=p'\circ\psi\\\ \\$$
 ・ファイバー空間 $(A,B,p,\bm{R}^r)$ とする。
 このとき、階数 $r$ のベクトル束 $(A,B,p,\bm{R}^r)$：
 $$\forall b\in B\text{ に対して、}p^{-1}(b)\text{ は }r\text{ 次元 }\bm{R}\text{ 上ベクトル空間}\\\ \\
-p^{-1}(b)\cong \bm{R}^r\ (\text{線形同相})$$ここで、$A,B$ が 有限次元 $C^{\infty}$ 多様体、$p$ が $C^{\infty}$ 写像、各自明化写像 $\phi_U$ が微分同相写像であれば、階数 $r$ の $C^{\infty}$ ベクトル束という。
+\pi_2\circ\phi_{\alpha}^{-1}:p^{-1}(b)\cong \bm{R}^r\ (\text{線形同相})$$ここで、$A,B$ が 有限次元 $C^{\infty}$ 多様体、$p$ が $C^{\infty}$ 写像、各自明化写像 $\phi_U$ が微分同相写像であれば、階数 $r$ の $C^{\infty}$ ベクトル束という。
 
     ・p^{-1}(x) の位相が部分空間位相なので、FとR^rの同相が言えない気がする。あと演算も未知だし。
 <br>
@@ -275,21 +275,13 @@ $$g(t)=\frac{f(t)}{f(t)+f(1-t)}\\\ \\
 h(x)=g\left(\frac{x-a^2}{b^2-a^2}\right),\quad(0<a<b)\\\ \\
 k(x)=h(x^2)\\\ \\
 \rho(x)=1-k(x)$$
-としていくと、$\rho$ は原点 $0$ における $y$ 軸対称な $C^{\infty}$ 写像で、$[-a,a]$ で $1$、$\mathrm{supp} f=[-b,b]$
+と定めると、$\rho$ は原点 $0$ における $y$ 軸対称な $C^{\infty}$ 写像で、$[-a,a]$ で $1$、$\mathrm{supp} f=[-b,b]$
 さらに、$\rho(x-q)$ は $q$ における $C^{\infty}$ 隆起関数。
 
     ・q∊Uにおける隆起関数：連続非負値で、qのある近傍で値が1でsuppρ⊂U
 <br>
 
 </dt><dd>
-
-- 
-$$\sigma:\bm{R}^n\to\bm{R}\\\ \\
-\sigma(x)=\rho(\|x\|)$$
-とする。
-このとき、$\sigma$ は $C^{\infty}$ 写像で、$\overline{U(\bm{0},a)}$ で $1$、$\mathrm{supp} f=\overline{U(0,b)}$
-さらに、$\sigma(x-q)$ は $q$ における $C^{\infty}$ 隆起関数。
-<br>
 
 - 
 $m$ 次元 $C^{\infty}$ 多様体 $M$、$q\in M$、開集合 $q\in U\sub M$ とする。
